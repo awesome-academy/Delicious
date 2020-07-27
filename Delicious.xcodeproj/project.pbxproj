@@ -1,0 +1,891 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		404CC62124CE645200686B99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404CC62024CE645200686B99 /* AppDelegate.swift */; };
+		404CC62324CE645200686B99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404CC62224CE645200686B99 /* SceneDelegate.swift */; };
+		404CC62524CE645200686B99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404CC62424CE645200686B99 /* ViewController.swift */; };
+		404CC62824CE645200686B99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404CC62624CE645200686B99 /* Main.storyboard */; };
+		404CC62B24CE645200686B99 /* Delicious.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 404CC62924CE645200686B99 /* Delicious.xcdatamodeld */; };
+		404CC62D24CE645500686B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404CC62C24CE645500686B99 /* Assets.xcassets */; };
+		404CC63024CE645500686B99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404CC62E24CE645500686B99 /* LaunchScreen.storyboard */; };
+		404CC63B24CE645500686B99 /* DeliciousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404CC63A24CE645500686B99 /* DeliciousTests.swift */; };
+		404CC64624CE645500686B99 /* DeliciousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404CC64524CE645500686B99 /* DeliciousUITests.swift */; };
+		40CAEADD24CE6E2E00037E4D /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAEAD924CE6E2E00037E4D /* AppNavigator.swift */; };
+		40CAEADE24CE6E2E00037E4D /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAEADA24CE6E2E00037E4D /* AppViewModel.swift */; };
+		40CAEADF24CE6E2E00037E4D /* AppUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAEADB24CE6E2E00037E4D /* AppUseCase.swift */; };
+		4315F19820DFCB53511832E1 /* Pods_Delicious_DeliciousUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370454AB369B584E902BB916 /* Pods_Delicious_DeliciousUITests.framework */; };
+		B71780445A5181144008F29F /* Pods_Delicious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D2E039C5EF491A0BD0C195 /* Pods_Delicious.framework */; };
+		BF2EFBF4E7B4DC345B601629 /* Pods_DeliciousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4D1E2C5C69C7E01983B635 /* Pods_DeliciousTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		404CC63724CE645500686B99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 404CC61524CE645200686B99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 404CC61C24CE645200686B99;
+			remoteInfo = Delicious;
+		};
+		404CC64224CE645500686B99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 404CC61524CE645200686B99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 404CC61C24CE645200686B99;
+			remoteInfo = Delicious;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0ABBB3369F1F383A0CF80815 /* Pods-Delicious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delicious.release.xcconfig"; path = "Target Support Files/Pods-Delicious/Pods-Delicious.release.xcconfig"; sourceTree = "<group>"; };
+		25D2E039C5EF491A0BD0C195 /* Pods_Delicious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delicious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		370454AB369B584E902BB916 /* Pods_Delicious_DeliciousUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delicious_DeliciousUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		404CC61D24CE645200686B99 /* Delicious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delicious.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		404CC62024CE645200686B99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		404CC62224CE645200686B99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		404CC62424CE645200686B99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		404CC62724CE645200686B99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		404CC62A24CE645200686B99 /* Delicious.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Delicious.xcdatamodel; sourceTree = "<group>"; };
+		404CC62C24CE645500686B99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		404CC62F24CE645500686B99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		404CC63124CE645500686B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		404CC63624CE645500686B99 /* DeliciousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliciousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		404CC63A24CE645500686B99 /* DeliciousTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliciousTests.swift; sourceTree = "<group>"; };
+		404CC63C24CE645500686B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		404CC64124CE645500686B99 /* DeliciousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliciousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		404CC64524CE645500686B99 /* DeliciousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliciousUITests.swift; sourceTree = "<group>"; };
+		404CC64724CE645500686B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		404CC65D24CE677500686B99 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		40CAEAD924CE6E2E00037E4D /* AppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		40CAEADA24CE6E2E00037E4D /* AppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		40CAEADB24CE6E2E00037E4D /* AppUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUseCase.swift; sourceTree = "<group>"; };
+		421C78504683F16252932011 /* Pods-Delicious-DeliciousUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delicious-DeliciousUITests.debug.xcconfig"; path = "Target Support Files/Pods-Delicious-DeliciousUITests/Pods-Delicious-DeliciousUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5206E7A8842697EC0D43E8F9 /* Pods-Delicious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delicious.debug.xcconfig"; path = "Target Support Files/Pods-Delicious/Pods-Delicious.debug.xcconfig"; sourceTree = "<group>"; };
+		5D4D1E2C5C69C7E01983B635 /* Pods_DeliciousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeliciousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6186E806125F62F98259F826 /* Pods-Delicious-DeliciousUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delicious-DeliciousUITests.release.xcconfig"; path = "Target Support Files/Pods-Delicious-DeliciousUITests/Pods-Delicious-DeliciousUITests.release.xcconfig"; sourceTree = "<group>"; };
+		821BE7FEF4056136F0E39638 /* Pods-DeliciousTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliciousTests.debug.xcconfig"; path = "Target Support Files/Pods-DeliciousTests/Pods-DeliciousTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E6BD8DC2D174B03ABCD660AA /* Pods-DeliciousTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliciousTests.release.xcconfig"; path = "Target Support Files/Pods-DeliciousTests/Pods-DeliciousTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		404CC61A24CE645200686B99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71780445A5181144008F29F /* Pods_Delicious.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		404CC63324CE645500686B99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF2EFBF4E7B4DC345B601629 /* Pods_DeliciousTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		404CC63E24CE645500686B99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4315F19820DFCB53511832E1 /* Pods_Delicious_DeliciousUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		404CC61424CE645200686B99 = {
+			isa = PBXGroup;
+			children = (
+				404CC61F24CE645200686B99 /* Delicious */,
+				404CC63924CE645500686B99 /* DeliciousTests */,
+				404CC64424CE645500686B99 /* DeliciousUITests */,
+				404CC61E24CE645200686B99 /* Products */,
+				EE4DA0AEE18B9257B60CBF10 /* Pods */,
+				651AD9EE4559657B8008546D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		404CC61E24CE645200686B99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				404CC61D24CE645200686B99 /* Delicious.app */,
+				404CC63624CE645500686B99 /* DeliciousTests.xctest */,
+				404CC64124CE645500686B99 /* DeliciousUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		404CC61F24CE645200686B99 /* Delicious */ = {
+			isa = PBXGroup;
+			children = (
+				404CC65A24CE65E200686B99 /* Utils */,
+				404CC65924CE65D600686B99 /* Scenes */,
+				404CC65824CE65B500686B99 /* Resources */,
+				404CC65724CE65A600686B99 /* Platform */,
+				404CC65624CE659C00686B99 /* Extensions */,
+				404CC65424CE658100686B99 /* Domain */,
+				404CC65324CE655F00686B99 /* Application */,
+				404CC63124CE645500686B99 /* Info.plist */,
+				404CC65D24CE677500686B99 /* Bridging-Header.h */,
+			);
+			path = Delicious;
+			sourceTree = "<group>";
+		};
+		404CC63924CE645500686B99 /* DeliciousTests */ = {
+			isa = PBXGroup;
+			children = (
+				404CC63A24CE645500686B99 /* DeliciousTests.swift */,
+				404CC63C24CE645500686B99 /* Info.plist */,
+			);
+			path = DeliciousTests;
+			sourceTree = "<group>";
+		};
+		404CC64424CE645500686B99 /* DeliciousUITests */ = {
+			isa = PBXGroup;
+			children = (
+				404CC64524CE645500686B99 /* DeliciousUITests.swift */,
+				404CC64724CE645500686B99 /* Info.plist */,
+			);
+			path = DeliciousUITests;
+			sourceTree = "<group>";
+		};
+		404CC65324CE655F00686B99 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				404CC62024CE645200686B99 /* AppDelegate.swift */,
+				404CC62224CE645200686B99 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		404CC65424CE658100686B99 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				404CC65524CE658D00686B99 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		404CC65524CE658D00686B99 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		404CC65624CE659C00686B99 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		404CC65724CE65A600686B99 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				404CC65C24CE663400686B99 /* CoreData */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		404CC65824CE65B500686B99 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				404CC62C24CE645500686B99 /* Assets.xcassets */,
+				404CC62624CE645200686B99 /* Main.storyboard */,
+				404CC62E24CE645500686B99 /* LaunchScreen.storyboard */,
+				404CC62924CE645200686B99 /* Delicious.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		404CC65924CE65D600686B99 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				40CAEAD724CE6E2D00037E4D /* App */,
+				404CC65B24CE65F400686B99 /* Storyboards */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		404CC65A24CE65E200686B99 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		404CC65B24CE65F400686B99 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		404CC65C24CE663400686B99 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		40CAEAD724CE6E2D00037E4D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				40CAEAD924CE6E2E00037E4D /* AppNavigator.swift */,
+				40CAEADA24CE6E2E00037E4D /* AppViewModel.swift */,
+				40CAEADB24CE6E2E00037E4D /* AppUseCase.swift */,
+				404CC62424CE645200686B99 /* ViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		651AD9EE4559657B8008546D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25D2E039C5EF491A0BD0C195 /* Pods_Delicious.framework */,
+				370454AB369B584E902BB916 /* Pods_Delicious_DeliciousUITests.framework */,
+				5D4D1E2C5C69C7E01983B635 /* Pods_DeliciousTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE4DA0AEE18B9257B60CBF10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5206E7A8842697EC0D43E8F9 /* Pods-Delicious.debug.xcconfig */,
+				0ABBB3369F1F383A0CF80815 /* Pods-Delicious.release.xcconfig */,
+				421C78504683F16252932011 /* Pods-Delicious-DeliciousUITests.debug.xcconfig */,
+				6186E806125F62F98259F826 /* Pods-Delicious-DeliciousUITests.release.xcconfig */,
+				821BE7FEF4056136F0E39638 /* Pods-DeliciousTests.debug.xcconfig */,
+				E6BD8DC2D174B03ABCD660AA /* Pods-DeliciousTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		404CC61C24CE645200686B99 /* Delicious */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 404CC64A24CE645500686B99 /* Build configuration list for PBXNativeTarget "Delicious" */;
+			buildPhases = (
+				FB807ECB2468063A62CD1E19 /* [CP] Check Pods Manifest.lock */,
+				404CC61924CE645200686B99 /* Sources */,
+				404CC61A24CE645200686B99 /* Frameworks */,
+				404CC61B24CE645200686B99 /* Resources */,
+				8F4B2EC37910A0FBFEE2F030 /* [CP] Embed Pods Frameworks */,
+				40CAEAE024CE723100037E4D /* Swiftlint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Delicious;
+			productName = Delicious;
+			productReference = 404CC61D24CE645200686B99 /* Delicious.app */;
+			productType = "com.apple.product-type.application";
+		};
+		404CC63524CE645500686B99 /* DeliciousTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 404CC64D24CE645500686B99 /* Build configuration list for PBXNativeTarget "DeliciousTests" */;
+			buildPhases = (
+				7B010F723A3F42BD6C87C949 /* [CP] Check Pods Manifest.lock */,
+				404CC63224CE645500686B99 /* Sources */,
+				404CC63324CE645500686B99 /* Frameworks */,
+				404CC63424CE645500686B99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				404CC63824CE645500686B99 /* PBXTargetDependency */,
+			);
+			name = DeliciousTests;
+			productName = DeliciousTests;
+			productReference = 404CC63624CE645500686B99 /* DeliciousTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		404CC64024CE645500686B99 /* DeliciousUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 404CC65024CE645500686B99 /* Build configuration list for PBXNativeTarget "DeliciousUITests" */;
+			buildPhases = (
+				3E0D2180594EBE2553873157 /* [CP] Check Pods Manifest.lock */,
+				404CC63D24CE645500686B99 /* Sources */,
+				404CC63E24CE645500686B99 /* Frameworks */,
+				404CC63F24CE645500686B99 /* Resources */,
+				39363DBCBF190B7B0C739796 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				404CC64324CE645500686B99 /* PBXTargetDependency */,
+			);
+			name = DeliciousUITests;
+			productName = DeliciousUITests;
+			productReference = 404CC64124CE645500686B99 /* DeliciousUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		404CC61524CE645200686B99 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = HoaPQ;
+				TargetAttributes = {
+					404CC61C24CE645200686B99 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					404CC63524CE645500686B99 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 404CC61C24CE645200686B99;
+					};
+					404CC64024CE645500686B99 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 404CC61C24CE645200686B99;
+					};
+				};
+			};
+			buildConfigurationList = 404CC61824CE645200686B99 /* Build configuration list for PBXProject "Delicious" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 404CC61424CE645200686B99;
+			productRefGroup = 404CC61E24CE645200686B99 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				404CC61C24CE645200686B99 /* Delicious */,
+				404CC63524CE645500686B99 /* DeliciousTests */,
+				404CC64024CE645500686B99 /* DeliciousUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		404CC61B24CE645200686B99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404CC63024CE645500686B99 /* LaunchScreen.storyboard in Resources */,
+				404CC62D24CE645500686B99 /* Assets.xcassets in Resources */,
+				404CC62824CE645200686B99 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		404CC63424CE645500686B99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		404CC63F24CE645500686B99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39363DBCBF190B7B0C739796 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Delicious-DeliciousUITests/Pods-Delicious-DeliciousUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Delicious-DeliciousUITests/Pods-Delicious-DeliciousUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Delicious-DeliciousUITests/Pods-Delicious-DeliciousUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E0D2180594EBE2553873157 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Delicious-DeliciousUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40CAEAE024CE723100037E4D /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		7B010F723A3F42BD6C87C949 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeliciousTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F4B2EC37910A0FBFEE2F030 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Delicious/Pods-Delicious-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Delicious/Pods-Delicious-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Delicious/Pods-Delicious-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB807ECB2468063A62CD1E19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Delicious-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		404CC61924CE645200686B99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404CC62524CE645200686B99 /* ViewController.swift in Sources */,
+				40CAEADE24CE6E2E00037E4D /* AppViewModel.swift in Sources */,
+				404CC62124CE645200686B99 /* AppDelegate.swift in Sources */,
+				404CC62324CE645200686B99 /* SceneDelegate.swift in Sources */,
+				40CAEADF24CE6E2E00037E4D /* AppUseCase.swift in Sources */,
+				404CC62B24CE645200686B99 /* Delicious.xcdatamodeld in Sources */,
+				40CAEADD24CE6E2E00037E4D /* AppNavigator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		404CC63224CE645500686B99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404CC63B24CE645500686B99 /* DeliciousTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		404CC63D24CE645500686B99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404CC64624CE645500686B99 /* DeliciousUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		404CC63824CE645500686B99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 404CC61C24CE645200686B99 /* Delicious */;
+			targetProxy = 404CC63724CE645500686B99 /* PBXContainerItemProxy */;
+		};
+		404CC64324CE645500686B99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 404CC61C24CE645200686B99 /* Delicious */;
+			targetProxy = 404CC64224CE645500686B99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		404CC62624CE645200686B99 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				404CC62724CE645200686B99 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		404CC62E24CE645500686B99 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				404CC62F24CE645500686B99 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		404CC64824CE645500686B99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		404CC64924CE645500686B99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		404CC64B24CE645500686B99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5206E7A8842697EC0D43E8F9 /* Pods-Delicious.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Delicious/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mespi.Delicious;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Delicious/Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		404CC64C24CE645500686B99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ABBB3369F1F383A0CF80815 /* Pods-Delicious.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Delicious/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mespi.Delicious;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Delicious/Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		404CC64E24CE645500686B99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 821BE7FEF4056136F0E39638 /* Pods-DeliciousTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BA72ZN423N;
+				INFOPLIST_FILE = DeliciousTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mespi.DeliciousTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Delicious.app/Delicious";
+			};
+			name = Debug;
+		};
+		404CC64F24CE645500686B99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6BD8DC2D174B03ABCD660AA /* Pods-DeliciousTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BA72ZN423N;
+				INFOPLIST_FILE = DeliciousTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mespi.DeliciousTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Delicious.app/Delicious";
+			};
+			name = Release;
+		};
+		404CC65124CE645500686B99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 421C78504683F16252932011 /* Pods-Delicious-DeliciousUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BA72ZN423N;
+				INFOPLIST_FILE = DeliciousUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mespi.DeliciousUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Delicious;
+			};
+			name = Debug;
+		};
+		404CC65224CE645500686B99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6186E806125F62F98259F826 /* Pods-Delicious-DeliciousUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BA72ZN423N;
+				INFOPLIST_FILE = DeliciousUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mespi.DeliciousUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Delicious;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		404CC61824CE645200686B99 /* Build configuration list for PBXProject "Delicious" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				404CC64824CE645500686B99 /* Debug */,
+				404CC64924CE645500686B99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		404CC64A24CE645500686B99 /* Build configuration list for PBXNativeTarget "Delicious" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				404CC64B24CE645500686B99 /* Debug */,
+				404CC64C24CE645500686B99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		404CC64D24CE645500686B99 /* Build configuration list for PBXNativeTarget "DeliciousTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				404CC64E24CE645500686B99 /* Debug */,
+				404CC64F24CE645500686B99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		404CC65024CE645500686B99 /* Build configuration list for PBXNativeTarget "DeliciousUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				404CC65124CE645500686B99 /* Debug */,
+				404CC65224CE645500686B99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		404CC62924CE645200686B99 /* Delicious.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				404CC62A24CE645200686B99 /* Delicious.xcdatamodel */,
+			);
+			currentVersion = 404CC62A24CE645200686B99 /* Delicious.xcdatamodel */;
+			path = Delicious.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 404CC61524CE645200686B99 /* Project object */;
+}

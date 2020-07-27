@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        configView()
+    }
+    
+    private func configView() {
         view.backgroundColor = .white
+        title = Constant.appTitle
     }
 }

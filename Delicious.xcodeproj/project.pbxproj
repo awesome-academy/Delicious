@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		404CC62124CE645200686B99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404CC62024CE645200686B99 /* AppDelegate.swift */; };
 		404CC62324CE645200686B99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404CC62224CE645200686B99 /* SceneDelegate.swift */; };
-		404CC62524CE645200686B99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404CC62424CE645200686B99 /* ViewController.swift */; };
 		404CC62824CE645200686B99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404CC62624CE645200686B99 /* Main.storyboard */; };
 		404CC62B24CE645200686B99 /* Delicious.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 404CC62924CE645200686B99 /* Delicious.xcdatamodeld */; };
 		404CC62D24CE645500686B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404CC62C24CE645500686B99 /* Assets.xcassets */; };
@@ -29,6 +28,22 @@
 		40D2168C24CE909D005310F3 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2168524CE909D005310F3 /* String+.swift */; };
 		40D2168E24CE9AE2005310F3 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2168D24CE9AE2005310F3 /* AppNavigationController.swift */; };
 		40D2169024CEAE5B005310F3 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2168F24CEAE5B005310F3 /* Icon.swift */; };
+		40D216A224CEB276005310F3 /* FavoriteNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2169424CEB276005310F3 /* FavoriteNavigator.swift */; };
+		40D216A324CEB276005310F3 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2169524CEB276005310F3 /* FavoriteViewController.swift */; };
+		40D216A424CEB276005310F3 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2169624CEB276005310F3 /* FavoriteViewModel.swift */; };
+		40D216A524CEB276005310F3 /* FavoriteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2169724CEB276005310F3 /* FavoriteUseCase.swift */; };
+		40D216A624CEB276005310F3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2169924CEB276005310F3 /* HomeViewModel.swift */; };
+		40D216A724CEB276005310F3 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2169A24CEB276005310F3 /* HomeUseCase.swift */; };
+		40D216A824CEB276005310F3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2169B24CEB276005310F3 /* HomeViewController.swift */; };
+		40D216A924CEB276005310F3 /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2169C24CEB276005310F3 /* HomeNavigator.swift */; };
+		40D216AA24CEB276005310F3 /* ShoppingListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2169E24CEB276005310F3 /* ShoppingListNavigator.swift */; };
+		40D216AB24CEB276005310F3 /* ShoppingListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2169F24CEB276005310F3 /* ShoppingListUseCase.swift */; };
+		40D216AC24CEB276005310F3 /* ShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D216A024CEB276005310F3 /* ShoppingListViewModel.swift */; };
+		40D216AD24CEB276005310F3 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D216A124CEB276005310F3 /* ShoppingListViewController.swift */; };
+		40D216AF24CEB41E005310F3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40D216AE24CEB41E005310F3 /* Home.storyboard */; };
+		40D216B224CEB45B005310F3 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40D216B024CEB45B005310F3 /* Favorite.storyboard */; };
+		40D216B324CEB45B005310F3 /* ShoppingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40D216B124CEB45B005310F3 /* ShoppingList.storyboard */; };
+		40D216B524CEB4B3005310F3 /* StoryBoards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D216B424CEB4B3005310F3 /* StoryBoards.swift */; };
 		4315F19820DFCB53511832E1 /* Pods_Delicious_DeliciousUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370454AB369B584E902BB916 /* Pods_Delicious_DeliciousUITests.framework */; };
 		B71780445A5181144008F29F /* Pods_Delicious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D2E039C5EF491A0BD0C195 /* Pods_Delicious.framework */; };
 		BF2EFBF4E7B4DC345B601629 /* Pods_DeliciousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4D1E2C5C69C7E01983B635 /* Pods_DeliciousTests.framework */; };
@@ -58,7 +73,6 @@
 		404CC61D24CE645200686B99 /* Delicious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delicious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		404CC62024CE645200686B99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		404CC62224CE645200686B99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		404CC62424CE645200686B99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		404CC62724CE645200686B99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		404CC62A24CE645200686B99 /* Delicious.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Delicious.xcdatamodel; sourceTree = "<group>"; };
 		404CC62C24CE645500686B99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +98,22 @@
 		40D2168524CE909D005310F3 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		40D2168D24CE9AE2005310F3 /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		40D2168F24CEAE5B005310F3 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		40D2169424CEB276005310F3 /* FavoriteNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteNavigator.swift; sourceTree = "<group>"; };
+		40D2169524CEB276005310F3 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		40D2169624CEB276005310F3 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		40D2169724CEB276005310F3 /* FavoriteUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteUseCase.swift; sourceTree = "<group>"; };
+		40D2169924CEB276005310F3 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		40D2169A24CEB276005310F3 /* HomeUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
+		40D2169B24CEB276005310F3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		40D2169C24CEB276005310F3 /* HomeNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
+		40D2169E24CEB276005310F3 /* ShoppingListNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListNavigator.swift; sourceTree = "<group>"; };
+		40D2169F24CEB276005310F3 /* ShoppingListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListUseCase.swift; sourceTree = "<group>"; };
+		40D216A024CEB276005310F3 /* ShoppingListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListViewModel.swift; sourceTree = "<group>"; };
+		40D216A124CEB276005310F3 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		40D216AE24CEB41E005310F3 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		40D216B024CEB45B005310F3 /* Favorite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
+		40D216B124CEB45B005310F3 /* ShoppingList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShoppingList.storyboard; sourceTree = "<group>"; };
+		40D216B424CEB4B3005310F3 /* StoryBoards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoards.swift; sourceTree = "<group>"; };
 		421C78504683F16252932011 /* Pods-Delicious-DeliciousUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delicious-DeliciousUITests.debug.xcconfig"; path = "Target Support Files/Pods-Delicious-DeliciousUITests/Pods-Delicious-DeliciousUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5206E7A8842697EC0D43E8F9 /* Pods-Delicious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delicious.debug.xcconfig"; path = "Target Support Files/Pods-Delicious/Pods-Delicious.debug.xcconfig"; sourceTree = "<group>"; };
 		5D4D1E2C5C69C7E01983B635 /* Pods_DeliciousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeliciousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +266,9 @@
 		404CC65924CE65D600686B99 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				40D2169324CEB276005310F3 /* Favorite */,
+				40D2169824CEB276005310F3 /* Home */,
+				40D2169D24CEB276005310F3 /* ShoppingList */,
 				40CAEAD724CE6E2D00037E4D /* App */,
 				404CC65B24CE65F400686B99 /* Storyboards */,
 			);
@@ -254,6 +287,10 @@
 		404CC65B24CE65F400686B99 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				40D216B024CEB45B005310F3 /* Favorite.storyboard */,
+				40D216B124CEB45B005310F3 /* ShoppingList.storyboard */,
+				40D216AE24CEB41E005310F3 /* Home.storyboard */,
+				40D216B424CEB4B3005310F3 /* StoryBoards.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -271,10 +308,42 @@
 				40CAEAD924CE6E2E00037E4D /* AppNavigator.swift */,
 				40CAEADA24CE6E2E00037E4D /* AppViewModel.swift */,
 				40CAEADB24CE6E2E00037E4D /* AppUseCase.swift */,
-				404CC62424CE645200686B99 /* ViewController.swift */,
 				40D2168D24CE9AE2005310F3 /* AppNavigationController.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		40D2169324CEB276005310F3 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				40D2169424CEB276005310F3 /* FavoriteNavigator.swift */,
+				40D2169724CEB276005310F3 /* FavoriteUseCase.swift */,
+				40D2169624CEB276005310F3 /* FavoriteViewModel.swift */,
+				40D2169524CEB276005310F3 /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		40D2169824CEB276005310F3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				40D2169C24CEB276005310F3 /* HomeNavigator.swift */,
+				40D2169A24CEB276005310F3 /* HomeUseCase.swift */,
+				40D2169924CEB276005310F3 /* HomeViewModel.swift */,
+				40D2169B24CEB276005310F3 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		40D2169D24CEB276005310F3 /* ShoppingList */ = {
+			isa = PBXGroup;
+			children = (
+				40D2169E24CEB276005310F3 /* ShoppingListNavigator.swift */,
+				40D2169F24CEB276005310F3 /* ShoppingListUseCase.swift */,
+				40D216A024CEB276005310F3 /* ShoppingListViewModel.swift */,
+				40D216A124CEB276005310F3 /* ShoppingListViewController.swift */,
+			);
+			path = ShoppingList;
 			sourceTree = "<group>";
 		};
 		651AD9EE4559657B8008546D /* Frameworks */ = {
@@ -412,7 +481,10 @@
 			files = (
 				404CC63024CE645500686B99 /* LaunchScreen.storyboard in Resources */,
 				404CC62D24CE645500686B99 /* Assets.xcassets in Resources */,
+				40D216B324CEB45B005310F3 /* ShoppingList.storyboard in Resources */,
 				404CC62824CE645200686B99 /* Main.storyboard in Resources */,
+				40D216B224CEB45B005310F3 /* Favorite.storyboard in Resources */,
+				40D216AF24CEB41E005310F3 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,21 +631,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				40D2168B24CE909D005310F3 /* UIViewController+.swift in Sources */,
+				40D216A924CEB276005310F3 /* HomeNavigator.swift in Sources */,
+				40D216A624CEB276005310F3 /* HomeViewModel.swift in Sources */,
 				40D2169024CEAE5B005310F3 /* Icon.swift in Sources */,
+				40D216AB24CEB276005310F3 /* ShoppingListUseCase.swift in Sources */,
 				40D2168924CE909D005310F3 /* MBSegmentControl+Rx.swift in Sources */,
-				404CC62524CE645200686B99 /* ViewController.swift in Sources */,
+				40D216A224CEB276005310F3 /* FavoriteNavigator.swift in Sources */,
 				40D2168624CE909D005310F3 /* UIFont+.swift in Sources */,
 				40D2168E24CE9AE2005310F3 /* AppNavigationController.swift in Sources */,
+				40D216A524CEB276005310F3 /* FavoriteUseCase.swift in Sources */,
 				40CAEADE24CE6E2E00037E4D /* AppViewModel.swift in Sources */,
 				404CC62124CE645200686B99 /* AppDelegate.swift in Sources */,
+				40D216A824CEB276005310F3 /* HomeViewController.swift in Sources */,
 				404CC62324CE645200686B99 /* SceneDelegate.swift in Sources */,
+				40D216AD24CEB276005310F3 /* ShoppingListViewController.swift in Sources */,
 				40D2168C24CE909D005310F3 /* String+.swift in Sources */,
 				40D2168A24CE909D005310F3 /* UIViewController+Rx.swift in Sources */,
+				40D216B524CEB4B3005310F3 /* StoryBoards.swift in Sources */,
 				40CAEADF24CE6E2E00037E4D /* AppUseCase.swift in Sources */,
+				40D216AC24CEB276005310F3 /* ShoppingListViewModel.swift in Sources */,
 				404CC62B24CE645200686B99 /* Delicious.xcdatamodeld in Sources */,
+				40D216A324CEB276005310F3 /* FavoriteViewController.swift in Sources */,
+				40D216AA24CEB276005310F3 /* ShoppingListNavigator.swift in Sources */,
 				40CAEADD24CE6E2E00037E4D /* AppNavigator.swift in Sources */,
 				40D2168824CE909D005310F3 /* UIView+.swift in Sources */,
 				40D2167E24CE905E005310F3 /* Constants.swift in Sources */,
+				40D216A424CEB276005310F3 /* FavoriteViewModel.swift in Sources */,
+				40D216A724CEB276005310F3 /* HomeUseCase.swift in Sources */,
 				40D2168724CE909D005310F3 /* Array+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

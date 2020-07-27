@@ -12,7 +12,7 @@ target 'Delicious' do
     pod 'MGLoadMore', '1.3.1'
     
     # Core
-    pod 'Alamofire', '5.2.1'
+    pod 'Alamofire', '4.9.1'
     pod 'ObjectMapper', '3.5.3'
     pod 'Reusable', '4.1.1'
     pod 'Then', '2.7.0'

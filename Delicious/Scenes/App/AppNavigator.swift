@@ -15,6 +15,6 @@ struct AppNavigator: AppNavigatorType {
     
     func toMain() {
         let viewController = ViewController()
-        window.rootViewController = viewController
+        window.rootViewController = AppNavigationController(rootViewController: viewController)
     }
 }

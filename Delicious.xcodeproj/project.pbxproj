@@ -19,6 +19,16 @@
 		40CAEADD24CE6E2E00037E4D /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAEAD924CE6E2E00037E4D /* AppNavigator.swift */; };
 		40CAEADE24CE6E2E00037E4D /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAEADA24CE6E2E00037E4D /* AppViewModel.swift */; };
 		40CAEADF24CE6E2E00037E4D /* AppUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAEADB24CE6E2E00037E4D /* AppUseCase.swift */; };
+		40D2167E24CE905E005310F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2167D24CE905E005310F3 /* Constants.swift */; };
+		40D2168624CE909D005310F3 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2167F24CE909C005310F3 /* UIFont+.swift */; };
+		40D2168724CE909D005310F3 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2168024CE909C005310F3 /* Array+.swift */; };
+		40D2168824CE909D005310F3 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2168124CE909C005310F3 /* UIView+.swift */; };
+		40D2168924CE909D005310F3 /* MBSegmentControl+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2168224CE909C005310F3 /* MBSegmentControl+Rx.swift */; };
+		40D2168A24CE909D005310F3 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2168324CE909C005310F3 /* UIViewController+Rx.swift */; };
+		40D2168B24CE909D005310F3 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2168424CE909C005310F3 /* UIViewController+.swift */; };
+		40D2168C24CE909D005310F3 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2168524CE909D005310F3 /* String+.swift */; };
+		40D2168E24CE9AE2005310F3 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2168D24CE9AE2005310F3 /* AppNavigationController.swift */; };
+		40D2169024CEAE5B005310F3 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2168F24CEAE5B005310F3 /* Icon.swift */; };
 		4315F19820DFCB53511832E1 /* Pods_Delicious_DeliciousUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370454AB369B584E902BB916 /* Pods_Delicious_DeliciousUITests.framework */; };
 		B71780445A5181144008F29F /* Pods_Delicious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D2E039C5EF491A0BD0C195 /* Pods_Delicious.framework */; };
 		BF2EFBF4E7B4DC345B601629 /* Pods_DeliciousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4D1E2C5C69C7E01983B635 /* Pods_DeliciousTests.framework */; };
@@ -64,6 +74,16 @@
 		40CAEAD924CE6E2E00037E4D /* AppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		40CAEADA24CE6E2E00037E4D /* AppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		40CAEADB24CE6E2E00037E4D /* AppUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUseCase.swift; sourceTree = "<group>"; };
+		40D2167D24CE905E005310F3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		40D2167F24CE909C005310F3 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		40D2168024CE909C005310F3 /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		40D2168124CE909C005310F3 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		40D2168224CE909C005310F3 /* MBSegmentControl+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MBSegmentControl+Rx.swift"; sourceTree = "<group>"; };
+		40D2168324CE909C005310F3 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		40D2168424CE909C005310F3 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		40D2168524CE909D005310F3 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		40D2168D24CE9AE2005310F3 /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		40D2168F24CEAE5B005310F3 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		421C78504683F16252932011 /* Pods-Delicious-DeliciousUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delicious-DeliciousUITests.debug.xcconfig"; path = "Target Support Files/Pods-Delicious-DeliciousUITests/Pods-Delicious-DeliciousUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5206E7A8842697EC0D43E8F9 /* Pods-Delicious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delicious.debug.xcconfig"; path = "Target Support Files/Pods-Delicious/Pods-Delicious.debug.xcconfig"; sourceTree = "<group>"; };
 		5D4D1E2C5C69C7E01983B635 /* Pods_DeliciousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeliciousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +203,13 @@
 		404CC65624CE659C00686B99 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				40D2168024CE909C005310F3 /* Array+.swift */,
+				40D2168224CE909C005310F3 /* MBSegmentControl+Rx.swift */,
+				40D2168524CE909D005310F3 /* String+.swift */,
+				40D2167F24CE909C005310F3 /* UIFont+.swift */,
+				40D2168124CE909C005310F3 /* UIView+.swift */,
+				40D2168424CE909C005310F3 /* UIViewController+.swift */,
+				40D2168324CE909C005310F3 /* UIViewController+Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -218,6 +245,8 @@
 		404CC65A24CE65E200686B99 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				40D2167D24CE905E005310F3 /* Constants.swift */,
+				40D2168F24CEAE5B005310F3 /* Icon.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -243,6 +272,7 @@
 				40CAEADA24CE6E2E00037E4D /* AppViewModel.swift */,
 				40CAEADB24CE6E2E00037E4D /* AppUseCase.swift */,
 				404CC62424CE645200686B99 /* ViewController.swift */,
+				40D2168D24CE9AE2005310F3 /* AppNavigationController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -528,13 +558,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D2168B24CE909D005310F3 /* UIViewController+.swift in Sources */,
+				40D2169024CEAE5B005310F3 /* Icon.swift in Sources */,
+				40D2168924CE909D005310F3 /* MBSegmentControl+Rx.swift in Sources */,
 				404CC62524CE645200686B99 /* ViewController.swift in Sources */,
+				40D2168624CE909D005310F3 /* UIFont+.swift in Sources */,
+				40D2168E24CE9AE2005310F3 /* AppNavigationController.swift in Sources */,
 				40CAEADE24CE6E2E00037E4D /* AppViewModel.swift in Sources */,
 				404CC62124CE645200686B99 /* AppDelegate.swift in Sources */,
 				404CC62324CE645200686B99 /* SceneDelegate.swift in Sources */,
+				40D2168C24CE909D005310F3 /* String+.swift in Sources */,
+				40D2168A24CE909D005310F3 /* UIViewController+Rx.swift in Sources */,
 				40CAEADF24CE6E2E00037E4D /* AppUseCase.swift in Sources */,
 				404CC62B24CE645200686B99 /* Delicious.xcdatamodeld in Sources */,
 				40CAEADD24CE6E2E00037E4D /* AppNavigator.swift in Sources */,
+				40D2168824CE909D005310F3 /* UIView+.swift in Sources */,
+				40D2167E24CE905E005310F3 /* Constants.swift in Sources */,
+				40D2168724CE909D005310F3 /* Array+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

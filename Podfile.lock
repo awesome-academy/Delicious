@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.2.1)
+  - Alamofire (4.9.1)
   - Differentiator (4.0.1)
   - MagicalRecord (2.3.0)
   - MarqueeLabel (4.0.2)
@@ -41,7 +41,7 @@ PODS:
   - Validator (3.2.1)
 
 DEPENDENCIES:
-  - Alamofire (= 5.2.1)
+  - Alamofire (= 4.9.1)
   - MagicalRecord (= 2.3.0)
   - MarqueeLabel (= 4.0.2)
   - MBProgressHUD (= 1.2.0)
@@ -94,7 +94,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/HoaPham98/MBSegmentControl.git
 
 SPEC CHECKSUMS:
-  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   MagicalRecord: 89eb7d7ead39fb37f01c3d010665ee94d17f8dba
   MarqueeLabel: f762aa681ae201f66c1d511858b171f75d83013a
@@ -117,6 +117,6 @@ SPEC CHECKSUMS:
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
   Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 
-PODFILE CHECKSUM: fffedc06dd6425d44f65bda55af1aec471a550c2
+PODFILE CHECKSUM: 26484dbef90b9a51901e39845a77f98157a819ac
 
 COCOAPODS: 1.9.0

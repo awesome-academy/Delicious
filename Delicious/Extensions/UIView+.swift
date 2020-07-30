@@ -98,7 +98,7 @@ extension UIView {
 
 // MARK: Corner radius
 extension UIView {
-    func applyCornerRadius(radius: CGFloat) {
+    func applyCornerRadius(radius: CGFloat = Constant.cornerRadius) {
         layer.cornerRadius = radius
         clipsToBounds = true
     }

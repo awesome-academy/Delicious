@@ -14,4 +14,10 @@ enum Constant {
     static let homeTitle = "Home"
     static let favoriteTitle = "Favorite"
     static let shoppingListTitle = "Shopping List"
+    
+    static let cornerRadius: CGFloat = 15
+    static let shadowRadius: CGFloat = 5
+    static let shadowOpacity: Float = 0.4
+    
+    static let tableHeaderSectionHeight: CGFloat = 38
 }

@@ -8,12 +8,20 @@
 
 import UIKit
 import Reusable
+import RxDataSources
 
 final class HomeViewController: UIViewController, BindableType {
     
     // MARK: - IBOutlets
+    @IBOutlet weak var tableView: RefreshTableView!
+    @IBOutlet weak var searchButton: UIBarButtonItem!
     
     // MARK: - Properties
+    private let featureTitle = "FEATURED"
+    private let latestTitle = "LATEST"
+    private let featuredCellHeight: CGFloat = 160
+    private var dataSource: RxTableViewSectionedReloadDataSource<HomeTableViewSection>!
+    private var featuredRecipes = [Int: [RecipeType]]()
     
     var viewModel: HomeViewModel!
 
@@ -32,6 +40,35 @@ final class HomeViewController: UIViewController, BindableType {
 
     private func configView() {
         navigationItem.title = Constant.appTitle
+        tableView.do {
+            $0.register(cellType: FeaturedTBCell.self)
+            $0.register(cellType: RecipeTBCell.self)
+            $0.estimatedRowHeight = UITableView.automaticDimension
+            $0.sectionHeaderHeight = UITableView.automaticDimension
+            $0.estimatedSectionHeaderHeight = Constant.tableHeaderSectionHeight
+            $0.refreshFooter = nil
+            $0.rx.setDelegate(self).disposed(by: rx.disposeBag)
+        }
+        
+        dataSource = RxTableViewSectionedReloadDataSource<HomeTableViewSection>(configureCell: { [weak self] (dataSource, tableView, indexPath, _) -> UITableViewCell in
+            switch dataSource[indexPath] {
+            case .featuredItem(let recipes):
+                let cell = tableView.dequeueReusableCell(
+                                for: indexPath,
+                                cellType: FeaturedTBCell.self).then {
+                                    guard let `self` = self else { return }
+                                    self.featuredRecipes[indexPath.section] = recipes
+                                    $0.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.section)
+                }
+                return cell
+            case .latestItem(let recipe):
+                let cell = tableView.dequeueReusableCell(
+                                for: indexPath,
+                                cellType: RecipeTBCell.self)
+                            cell.setInfo(recipe: recipe)
+                return cell
+            }
+        })
     }
 
     func bindViewModel() {
@@ -41,8 +78,57 @@ final class HomeViewController: UIViewController, BindableType {
 }
 
 // MARK: - Binders
-extension HomeViewController {
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = HomeTableHeaderView.loadFromNib().then {
+            var title = ""
+            if dataSource.sectionModels.isEmpty {
+                return
+            }
+            switch dataSource.sectionModels[section] {
+            case .featuredSection:
+                title = featureTitle
+            case .latestSection:
+                title = latestTitle
+            }
+            $0.setUp(title: title)
+        }
+        return header
+    }
+}
+
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let section = collectionView.tag
+        return featuredRecipes[section]?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: FeaturedCLCell.self)
+        let section = collectionView.tag
+        guard let recipe = featuredRecipes[section]?[indexPath.row] else { return cell }
+        cell.setInfo(with: recipe)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // TODO: Handle Actions
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height: CGFloat = featuredCellHeight
+        let width = height / 393 * 636
+        return CGSize(width: width, height: height)
+    }
 }
 
 // MARK: - StoryboardSceneBased

@@ -7,9 +7,12 @@
 //
 
 protocol HomeUseCaseType {
-
+    func getRecipes() -> Observable<[RecipeInformation]>
 }
 
 struct HomeUseCase: HomeUseCaseType {
-
+    func getRecipes() -> Observable<[RecipeInformation]> {
+        // TODO: Call API
+        return Observable.of([])
+    }
 }

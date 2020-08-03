@@ -32,6 +32,9 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - RxViewController (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - SDWebImage (5.8.3):
     - SDWebImage/Core (= 5.8.3)
   - SDWebImage/Core (5.8.3)
@@ -54,6 +57,7 @@ DEPENDENCIES:
   - OrderedSet (= 5.0.0)
   - Reusable (= 4.1.1)
   - RxDataSources (= 4.0.1)
+  - RxViewController (= 1.0)
   - SDWebImage (= 5.8.3)
   - SnapKit (= 5.0.1)
   - Then (= 2.7.0)
@@ -78,6 +82,7 @@ SPEC REPOS:
     - RxDataSources
     - RxRelay
     - RxSwift
+    - RxViewController
     - SDWebImage
     - SnapKit
     - Then
@@ -111,12 +116,13 @@ SPEC CHECKSUMS:
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
   SDWebImage: 112503ec94a5a2a41869503844a15e8d8f1ead5c
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
   Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 
-PODFILE CHECKSUM: 26484dbef90b9a51901e39845a77f98157a819ac
+PODFILE CHECKSUM: 6ba15014f9e2e083b2515cb2e88eaeb40dd67545
 
 COCOAPODS: 1.9.3

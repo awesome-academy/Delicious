@@ -15,6 +15,9 @@ enum Constant {
     static let favoriteTitle = "Favorite"
     static let shoppingListTitle = "Shopping List"
     
+    static let emptyMessage = "Your data is not available. Please try again!"
+    static let throttle = RxTimeInterval.milliseconds(300)
+    
     static let cornerRadius: CGFloat = 15
     static let shadowRadius: CGFloat = 5
     static let shadowOpacity: Float = 0.4

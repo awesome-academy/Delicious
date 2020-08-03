@@ -23,6 +23,9 @@ final class HomeViewController: UIViewController, BindableType {
     private var dataSource: RxTableViewSectionedReloadDataSource<HomeTableViewSection>!
     private var featuredRecipes = [Int: [RecipeType]]()
     
+    private let selectTrigger = PublishSubject<RecipeType>()
+    private let loadTrigger = PublishSubject<Void>()
+    
     var viewModel: HomeViewModel!
 
     // MARK: - Life Cycle
@@ -46,6 +49,7 @@ final class HomeViewController: UIViewController, BindableType {
             $0.estimatedRowHeight = UITableView.automaticDimension
             $0.sectionHeaderHeight = UITableView.automaticDimension
             $0.estimatedSectionHeaderHeight = Constant.tableHeaderSectionHeight
+            $0.backgroundView = EmptyView()
             $0.refreshFooter = nil
             $0.rx.setDelegate(self).disposed(by: rx.disposeBag)
         }
@@ -72,8 +76,41 @@ final class HomeViewController: UIViewController, BindableType {
     }
 
     func bindViewModel() {
-        let input = HomeViewModel.Input()
+        let input = HomeViewModel.Input(
+            loadTrigger: loadTrigger.startWith(()).asDriverOnErrorJustComplete(),
+            reloadTrigger: tableView.loadMoreTopTrigger,
+            selectTrigger: selectTrigger.asDriverOnErrorJustComplete().throttle(Constant.throttle),
+            selectItemTrigger: tableView.rx.modelSelected(HomeTableViewItem.self).asDriver().throttle(Constant.throttle),
+            searchTrigger: searchButton.rx.tap.asDriver().throttle(Constant.throttle)
+        )
+        
         let output = viewModel.transform(input)
+        
+        output.isLoading
+            .drive(rx.isLoading)
+            .disposed(by: rx.disposeBag)
+        output.isReloading
+            .drive(tableView.isLoadingMoreTop)
+            .disposed(by: rx.disposeBag)
+        output.tableViewState
+            .drive(tableView.rx.state)
+            .disposed(by: rx.disposeBag)
+        output.loadedError
+            .drive(rx.error)
+            .disposed(by: rx.disposeBag)
+        output.selected
+            .drive()
+            .disposed(by: rx.disposeBag)
+        output.search
+            .drive()
+            .disposed(by: rx.disposeBag)
+        output.data
+            .do(onNext: { _ in self.featuredRecipes.removeAll() })
+            .drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: rx.disposeBag)
+        tableView.rx.action
+            .bind(to: loadTrigger)
+            .disposed(by: rx.disposeBag)
     }
 }
 
@@ -117,7 +154,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // TODO: Handle Actions
+        guard let recipe = featuredRecipes[indexPath.section]?[indexPath.row] else { return }
+        selectTrigger.onNext(recipe)
     }
 }
 

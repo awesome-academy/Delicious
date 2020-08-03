@@ -16,10 +16,10 @@ class EmptyView: UIView, NibOwnerLoadable {
         case error(Error)
     }
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var messageLabel: UILabel!
+    @IBOutlet private weak var actionButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

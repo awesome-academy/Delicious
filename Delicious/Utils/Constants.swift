@@ -23,4 +23,5 @@ enum Constant {
     static let shadowOpacity: Float = 0.4
     
     static let tableHeaderSectionHeight: CGFloat = 38
+    static let segmentHeight: CGFloat = 44
 }

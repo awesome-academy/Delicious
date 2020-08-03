@@ -11,7 +11,7 @@ import Reusable
 
 final class FeaturedCLCell: UICollectionViewCell, NibReusable {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet private weak var imageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

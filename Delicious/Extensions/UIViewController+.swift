@@ -21,6 +21,28 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func showAlertConfirm(title: String?,
+                          message: String?,
+                          confirmTitle: String = "OK",
+                          confirmHandler: (() -> Void)? = nil,
+                          cancelTitle: String = "Cancel",
+                          cancelHandler: (() -> Void)? = nil) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        // Custom action
+        let btnCancel = UIAlertAction(title: cancelTitle, style: .destructive) { (_) in
+            cancelHandler?()
+        }
+        alert.addAction(btnCancel)
+        let btnConfirm = UIAlertAction(title: confirmTitle, style: .default) { (_) in
+            confirmHandler?()
+        }
+        alert.addAction(btnConfirm)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func showAlertView(title: String?,
                        message: String?,
                        style: UIAlertController.Style,

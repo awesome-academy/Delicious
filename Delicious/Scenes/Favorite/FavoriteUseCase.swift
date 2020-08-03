@@ -7,9 +7,19 @@
 //
 
 protocol FavoriteUseCaseType {
-
+    func getFavoriteRecipes() -> Observable<[FavoriteRecipe]>
+    func remove(recipe: FavoriteRecipe) -> Observable<Void>
 }
 
 struct FavoriteUseCase: FavoriteUseCaseType {
 
+    func getFavoriteRecipes() -> Observable<[FavoriteRecipe]> {
+        // TODO: Add Fetch data
+        return Observable.just([])
+    }
+    
+    func remove(recipe: FavoriteRecipe) -> Observable<Void> {
+        // TODO: Add Fetch data
+        return Observable.just(())
+    }
 }

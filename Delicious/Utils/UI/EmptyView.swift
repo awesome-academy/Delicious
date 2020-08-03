@@ -24,11 +24,13 @@ class EmptyView: UIView, NibOwnerLoadable {
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadNibContent()
+        isHidden = true
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadNibContent()
+        isHidden = true
     }
     let selectTrigger = PublishSubject<Void>()
     var currentState: State = .normal {
@@ -43,6 +45,7 @@ class EmptyView: UIView, NibOwnerLoadable {
                       message: message,
                       buttonTitle: nil)
             case .error(let error):
+                isHidden = false
                 setUp(image: Icon.icError,
                       title: "Opps",
                       message: error.localizedDescription,

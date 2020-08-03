@@ -22,7 +22,7 @@ struct AppNavigator: AppNavigatorType {
                                          selectedImage: Icon.icHomeSelected)
         }
         let homeNavigator = HomeNavigator(navigationController: navHome)
-        let homeUseCase = HomeUseCase()
+        let homeUseCase = HomeUseCase(repository: HomeRepository())
         let homeViewModel = HomeViewModel(navigator: homeNavigator,
                                           useCase: homeUseCase)
         homeVC.bindViewModel(to: homeViewModel)

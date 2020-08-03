@@ -61,14 +61,14 @@ extension HomeViewModel: ViewModelType {
         ).distinctUntilChanged { (latest, new) in
             switch latest {
             case .error:
+                return false
+            default:
                 switch new {
                 case .error:
-                    return false
-                default:
                     return true
+                default:
+                    return false
                 }
-            default:
-                return false
             }
         }
 

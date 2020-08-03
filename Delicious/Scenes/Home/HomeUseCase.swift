@@ -11,8 +11,10 @@ protocol HomeUseCaseType {
 }
 
 struct HomeUseCase: HomeUseCaseType {
+    let repository: HomeRespositoryType
+    
     func getRecipes() -> Observable<[RecipeInformation]> {
-        // TODO: Call API
-        return Observable.of([])
+        let input = HomeRequest()
+        return repository.getHomeData(input: input)
     }
 }

@@ -37,6 +37,8 @@
 		4045028924D92FDF00D0B1B0 /* MagicalRecord+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045028824D92FDF00D0B1B0 /* MagicalRecord+Rx.swift */; };
 		4045028B24D92FEA00D0B1B0 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045028A24D92FEA00D0B1B0 /* CoreDataRepository.swift */; };
 		4045028D24D9304D00D0B1B0 /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045028C24D9304D00D0B1B0 /* CoreDataError.swift */; };
+		4045028F24D9359C00D0B1B0 /* ShopingListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045028E24D9359C00D0B1B0 /* ShopingListRepository.swift */; };
+		4045029124D9367200D0B1B0 /* NSShortIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045029024D9367200D0B1B0 /* NSShortIngredient.swift */; };
 		4048B87D24D382DF001D795C /* RecipeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4048B87424D382DF001D795C /* RecipeInfoViewController.swift */; };
 		4048B87E24D382DF001D795C /* RecipeInfoNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4048B87524D382DF001D795C /* RecipeInfoNavigator.swift */; };
 		4048B87F24D382DF001D795C /* RecipeInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4048B87624D382DF001D795C /* RecipeInfoUseCase.swift */; };
@@ -168,6 +170,8 @@
 		4045028824D92FDF00D0B1B0 /* MagicalRecord+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MagicalRecord+Rx.swift"; sourceTree = "<group>"; };
 		4045028A24D92FEA00D0B1B0 /* CoreDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
 		4045028C24D9304D00D0B1B0 /* CoreDataError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
+		4045028E24D9359C00D0B1B0 /* ShopingListRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopingListRepository.swift; sourceTree = "<group>"; };
+		4045029024D9367200D0B1B0 /* NSShortIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSShortIngredient.swift; sourceTree = "<group>"; };
 		4048B87424D382DF001D795C /* RecipeInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfoViewController.swift; sourceTree = "<group>"; };
 		4048B87524D382DF001D795C /* RecipeInfoNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfoNavigator.swift; sourceTree = "<group>"; };
 		4048B87624D382DF001D795C /* RecipeInfoUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfoUseCase.swift; sourceTree = "<group>"; };
@@ -344,6 +348,7 @@
 			children = (
 				4045027A24D9063E00D0B1B0 /* ShoppingList.swift */,
 				4045027B24D9063E00D0B1B0 /* ShortIngredient.swift */,
+				4045029024D9367200D0B1B0 /* NSShortIngredient.swift */,
 			);
 			path = "Shopping List";
 			sourceTree = "<group>";
@@ -561,6 +566,7 @@
 			children = (
 				4045028C24D9304D00D0B1B0 /* CoreDataError.swift */,
 				4045028A24D92FEA00D0B1B0 /* CoreDataRepository.swift */,
+				4045028E24D9359C00D0B1B0 /* ShopingListRepository.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -991,6 +997,7 @@
 				407DED9E24CECBC500B30B5A /* BaseRequest.swift in Sources */,
 				40805DE024D7A9BB00C5BB82 /* HomeResponse.swift in Sources */,
 				40358B1624D8003D00D7E8DE /* RefreshControl.swift in Sources */,
+				4045028F24D9359C00D0B1B0 /* ShopingListRepository.swift in Sources */,
 				4048B87E24D382DF001D795C /* RecipeInfoNavigator.swift in Sources */,
 				4045028524D9075100D0B1B0 /* ShoppingListHeaderView.swift in Sources */,
 				4045027E24D9063F00D0B1B0 /* ShortIngredient.swift in Sources */,
@@ -1012,6 +1019,7 @@
 				407DEDA324CECBC500B30B5A /* ErrorResponse.swift in Sources */,
 				40EDDBB924CED8100091DDD2 /* Us.swift in Sources */,
 				40D216A524CEB276005310F3 /* FavoriteUseCase.swift in Sources */,
+				4045029124D9367200D0B1B0 /* NSShortIngredient.swift in Sources */,
 				4045028424D9075100D0B1B0 /* ShoppingListTBCell.swift in Sources */,
 				40EDDBBA24CED8100091DDD2 /* ExtendedIngredient.swift in Sources */,
 				40CAEADE24CE6E2E00037E4D /* AppViewModel.swift in Sources */,

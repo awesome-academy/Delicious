@@ -25,11 +25,10 @@ struct FavoriteNavigator: FavoriteNavigatorType {
     }
     
     func showDeletionConfirm(recipe: FavoriteRecipe) -> Driver<FavoriteRecipe> {
-        let message = "Are you sure you want to remove this recipe from Favorite?"
         return Observable<FavoriteRecipe>.create { observable in
             self.navigationController
                 .showAlertConfirm(title: "Remove confirm",
-                                  message: message,
+                                  message: Constant.favoriteRemoveConfirm,
                                   confirmHandler: {
                                       observable.onNext(recipe)
                                       observable.onCompleted()

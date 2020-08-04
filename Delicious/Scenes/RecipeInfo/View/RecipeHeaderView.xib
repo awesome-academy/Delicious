@@ -11,7 +11,7 @@
             <connections>
                 <outlet property="creditsLabel" destination="3RT-u3-Ciw" id="KSj-xH-yj7"/>
                 <outlet property="difficultyLabel" destination="icA-s6-zI5" id="dr0-B1-N4U"/>
-                <outlet property="imageView" destination="q1Y-0Y-kpr" id="18c-BC-7F3"/>
+                <outlet property="recipeImage" destination="q1Y-0Y-kpr" id="0O8-ht-FBz"/>
                 <outlet property="servingsLabel" destination="wU7-tu-NuH" id="vBB-IR-hWl"/>
                 <outlet property="timeLabel" destination="slM-Kd-b9D" id="ZKX-lj-efu"/>
                 <outlet property="titleLabel" destination="Rfr-1A-q2y" id="OaV-hp-3TB"/>

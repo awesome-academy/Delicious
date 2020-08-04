@@ -29,3 +29,13 @@ extension ShoppingList {
         ingredients = recipe.extendedIngredients.map { ShortIngredient(from: $0) }
     }
 }
+
+extension ShoppingList: CoreDataModel {
+    static var primaryKey: String {
+        return "id"
+    }
+    
+    var modelID: Int {
+        return id
+    }
+}

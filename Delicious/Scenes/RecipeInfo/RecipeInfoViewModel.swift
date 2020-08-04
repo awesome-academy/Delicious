@@ -23,6 +23,9 @@ extension RecipeInfoViewModel: ViewModelType {
     }
 
     func transform(_ input: Input) -> Output {
+        if let recipe = recipe as? RecipeInformation {
+            ShoppingListRepository().add(ShoppingList(from: recipe)).asDriverOnErrorJustComplete().drive()
+        }
         return Output()
     }
 }

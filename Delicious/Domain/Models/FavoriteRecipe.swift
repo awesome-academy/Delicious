@@ -26,3 +26,13 @@ extension FavoriteRecipe: IdentifiableType, Equatable {
         return lhs.id == rhs.id
     }
 }
+
+extension FavoriteRecipe: CoreDataModel {
+    static var primaryKey: String {
+        return "id"
+    }
+    
+    var modelID: Int {
+        return id
+    }
+}

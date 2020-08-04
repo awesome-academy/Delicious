@@ -71,6 +71,7 @@
 		40805DE224D7A9C200C5BB82 /* HomeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40805DE124D7A9C100C5BB82 /* HomeRequest.swift */; };
 		40805DE424D7A9D000C5BB82 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40805DE324D7A9D000C5BB82 /* URLs.swift */; };
 		40805DE724D7A9F900C5BB82 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40805DE624D7A9F900C5BB82 /* HomeRepository.swift */; };
+		40C1D1C824D9520700563888 /* FavoriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1D1C724D9520600563888 /* FavoriteRepository.swift */; };
 		40CAEADD24CE6E2E00037E4D /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAEAD924CE6E2E00037E4D /* AppNavigator.swift */; };
 		40CAEADE24CE6E2E00037E4D /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAEADA24CE6E2E00037E4D /* AppViewModel.swift */; };
 		40CAEADF24CE6E2E00037E4D /* AppUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAEADB24CE6E2E00037E4D /* AppUseCase.swift */; };
@@ -211,6 +212,7 @@
 		40805DE124D7A9C100C5BB82 /* HomeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRequest.swift; sourceTree = "<group>"; };
 		40805DE324D7A9D000C5BB82 /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		40805DE624D7A9F900C5BB82 /* HomeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		40C1D1C724D9520600563888 /* FavoriteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRepository.swift; sourceTree = "<group>"; };
 		40CAEAD924CE6E2E00037E4D /* AppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		40CAEADA24CE6E2E00037E4D /* AppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		40CAEADB24CE6E2E00037E4D /* AppUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUseCase.swift; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 				4045028C24D9304D00D0B1B0 /* CoreDataError.swift */,
 				4045028A24D92FEA00D0B1B0 /* CoreDataRepository.swift */,
 				4045028E24D9359C00D0B1B0 /* ShopingListRepository.swift */,
+				40C1D1C724D9520600563888 /* FavoriteRepository.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1063,6 +1066,7 @@
 				40EDDBB524CED8100091DDD2 /* WinePairing.swift in Sources */,
 				4048B87F24D382DF001D795C /* RecipeInfoUseCase.swift in Sources */,
 				40D2167E24CE905E005310F3 /* Constants.swift in Sources */,
+				40C1D1C824D9520700563888 /* FavoriteRepository.swift in Sources */,
 				4048B89024D38830001D795C /* UITableView+Rx.swift in Sources */,
 				40D216A424CEB276005310F3 /* FavoriteViewModel.swift in Sources */,
 				4045028924D92FDF00D0B1B0 /* MagicalRecord+Rx.swift in Sources */,

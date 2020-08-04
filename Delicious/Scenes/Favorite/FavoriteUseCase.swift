@@ -12,14 +12,13 @@ protocol FavoriteUseCaseType {
 }
 
 struct FavoriteUseCase: FavoriteUseCaseType {
-
+    let repository = FavoriteRepository()
+    
     func getFavoriteRecipes() -> Observable<[FavoriteRecipe]> {
-        // TODO: Add Fetch data
-        return Observable.just([])
+        return repository.getRecipes()
     }
     
     func remove(recipe: FavoriteRecipe) -> Observable<Void> {
-        // TODO: Add Fetch data
-        return Observable.just(())
+        return repository.deleteItem(havingID: recipe.id)
     }
 }

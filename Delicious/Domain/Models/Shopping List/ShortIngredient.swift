@@ -25,4 +25,14 @@ extension ShortIngredient {
         unit = ingredient.unit
         isDone = false
     }
+    
+    func toClass() -> NSShortIngredient {
+        return NSShortIngredient(
+            id: id,
+            title: title,
+            amount: amount,
+            unit: unit,
+            isDone: isDone
+        )
+    }
 }

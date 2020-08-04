@@ -16,6 +16,11 @@ enum Constant {
     static let shoppingListTitle = "Shopping List"
     
     static let emptyMessage = "Your data is not available. Please try again!"
+    static let favoriteEmptyMessage = "You do not have any favorite recipes yet!"
+    static let shoppingEmptyMessage = "You do not have any shopping lists yet!"
+    static let favoriteRemoveConfirm = "Are you sure you want to remove this recipe from Favorite?"
+    static let shoppingListRemoveConfirm = "Are you sure you want to remove this recipe from Shopping List?"
+    
     static let throttle = RxTimeInterval.milliseconds(300)
     
     static let cornerRadius: CGFloat = 15

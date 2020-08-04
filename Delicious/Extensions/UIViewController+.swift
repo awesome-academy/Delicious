@@ -46,7 +46,7 @@ extension UIViewController {
     func showAlertView(title: String?,
                        message: String?,
                        style: UIAlertController.Style,
-                       actions: [(String, UIAlertAction.Style)]) -> Observable<Int> {
+                       actions: [(String, UIAlertAction.Style)]) -> Driver<Int> {
         return Observable.create { observer in
             let alertController = UIAlertController(title: title,
                                                     message: message,
@@ -65,7 +65,8 @@ extension UIViewController {
                          completion: nil)
             return Disposables.create {
                 alertController.dismiss(animated: true, completion: nil)
+                observer.onCompleted()
             }
-        }
+        }.asDriverOnErrorJustComplete()
     }
 }

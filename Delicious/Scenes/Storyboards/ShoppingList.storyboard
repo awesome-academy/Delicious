@@ -7,20 +7,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Shopping List View Controller-->
-        <scene sceneID="qmc-nm-7Bq">
+        <!--Shoping List-->
+        <scene sceneID="NeN-NE-nG7">
             <objects>
-                <viewController storyboardIdentifier="ShoppingListViewController" id="KAD-Cs-0Db" customClass="ShoppingListViewController" customModule="Delicious" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Z4K-VR-ynj">
+                <viewController storyboardIdentifier="ShoppingListViewController" id="WQS-vk-IOr" customClass="ShoppingListViewController" customModule="Delicious" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6dG-dL-CKe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lmk-gg-Je0" customClass="RefreshTableView" customModule="MGLoadMore">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="LCR-KV-3Cq"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="lmk-gg-Je0" secondAttribute="bottom" id="7XS-Lx-M7r"/>
+                            <constraint firstItem="lmk-gg-Je0" firstAttribute="top" secondItem="2qS-dS-lS5" secondAttribute="top" id="RmL-Ws-Zym"/>
+                            <constraint firstItem="2qS-dS-lS5" firstAttribute="trailing" secondItem="lmk-gg-Je0" secondAttribute="trailing" id="lX8-X8-qgO"/>
+                            <constraint firstItem="lmk-gg-Je0" firstAttribute="leading" secondItem="2qS-dS-lS5" secondAttribute="leading" id="v7e-4W-FfH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2qS-dS-lS5"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Shoping List" id="CIf-04-68b"/>
+                    <connections>
+                        <outlet property="tableView" destination="lmk-gg-Je0" id="e1h-5K-5MM"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wCK-rG-fx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CwR-rT-9lU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-29" y="80"/>
+            <point key="canvasLocation" x="950.72463768115949" y="62.946428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zvA-IB-EnY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o9n-ii-ARx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gyC-wV-7fd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WQS-vk-IOr" kind="relationship" relationship="rootViewController" id="e9L-rx-odf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a6y-gV-1XY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="62.946428571428569"/>
         </scene>
     </scenes>
 </document>

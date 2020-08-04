@@ -6,6 +6,8 @@
 //  Copyright © 2020 sun. All rights reserved.
 //
 
+typealias ShoppingListSectionModel = SectionModel<ShoppingList, ShortIngredient>
+
 struct ShoppingListViewModel {
     let navigator: ShoppingListNavigatorType
     let useCase: ShoppingListUseCaseType

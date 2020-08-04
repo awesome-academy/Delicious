@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipeHeaderView" customModule="Delicious" customModuleProvider="target">
+            <connections>
+                <outlet property="creditsLabel" destination="3RT-u3-Ciw" id="KSj-xH-yj7"/>
+                <outlet property="difficultyLabel" destination="icA-s6-zI5" id="dr0-B1-N4U"/>
+                <outlet property="imageView" destination="q1Y-0Y-kpr" id="18c-BC-7F3"/>
+                <outlet property="servingsLabel" destination="wU7-tu-NuH" id="vBB-IR-hWl"/>
+                <outlet property="timeLabel" destination="slM-Kd-b9D" id="ZKX-lj-efu"/>
+                <outlet property="titleLabel" destination="Rfr-1A-q2y" id="OaV-hp-3TB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="212"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_food" translatesAutoresizingMaskIntoConstraints="NO" id="q1Y-0Y-kpr">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="212"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="q1Y-0Y-kpr" secondAttribute="height" multiplier="375:194" constant="-23.195876288659804" id="fq7-ic-5U5"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="fq7-ic-5U5"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFJ-fF-Trf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="212"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ycX-62-zAC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="212"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kqW-m6-0BI">
+                    <rect key="frame" x="0.0" y="89.5" width="414" height="106.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="8fT-gM-f3h">
+                            <rect key="frame" x="115.5" y="0.0" width="183" height="60.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="SALAD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RT-u3-Ciw">
+                                    <rect key="frame" x="67.5" y="0.0" width="48" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Pasta Salad" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfr-1A-q2y">
+                                    <rect key="frame" x="30.5" y="27.5" width="122.5" height="33"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Rfr-1A-q2y" firstAttribute="width" secondItem="8fT-gM-f3h" secondAttribute="width" multiplier="0.67" id="A3W-Ho-4eU"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="z28-dK-nO2">
+                            <rect key="frame" x="40" y="90.5" width="334" height="16"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="meR-c9-Dmz">
+                                    <rect key="frame" x="0.0" y="0.0" width="98" height="16"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_duration" translatesAutoresizingMaskIntoConstraints="NO" id="en3-nd-2VT">
+                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="16" id="3RN-Sy-BWC"/>
+                                                <constraint firstAttribute="height" constant="16" id="5Ah-7M-wuT"/>
+                                                <constraint firstAttribute="width" secondItem="en3-nd-2VT" secondAttribute="height" multiplier="1:1" id="aIM-3G-A79"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slM-Kd-b9D">
+                                            <rect key="frame" x="24" y="0.0" width="74" height="16"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="m8m-qa-OYH">
+                                    <rect key="frame" x="128" y="0.0" width="80" height="16"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_difficulty" translatesAutoresizingMaskIntoConstraints="NO" id="xqw-aO-slL">
+                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="16" id="9Ui-Tb-JQI"/>
+                                                <constraint firstAttribute="width" secondItem="xqw-aO-slL" secondAttribute="height" multiplier="1:1" id="VmB-nO-cka"/>
+                                                <constraint firstAttribute="height" constant="16" id="xne-FJ-gW6"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icA-s6-zI5">
+                                            <rect key="frame" x="24" y="0.0" width="56" height="16"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="T3L-7W-QWf">
+                                    <rect key="frame" x="238" y="0.0" width="96" height="16"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_recipes_grey" translatesAutoresizingMaskIntoConstraints="NO" id="EXs-sy-sxu">
+                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="16" id="6Dv-n6-7lk"/>
+                                                <constraint firstAttribute="height" constant="16" id="erY-GD-pdg"/>
+                                                <constraint firstAttribute="width" secondItem="EXs-sy-sxu" secondAttribute="height" multiplier="1:1" id="r5h-hx-cDh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 People " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wU7-tu-NuH">
+                                            <rect key="frame" x="24" y="0.0" width="72" height="16"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="na8-19-5AT"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="na8-19-5AT"/>
+                        </mask>
+                    </variation>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="OFJ-fF-Trf" firstAttribute="bottom" secondItem="q1Y-0Y-kpr" secondAttribute="bottom" id="3XT-vr-dCg"/>
+                <constraint firstItem="OFJ-fF-Trf" firstAttribute="leading" secondItem="q1Y-0Y-kpr" secondAttribute="leading" id="AuJ-S8-yFH"/>
+                <constraint firstAttribute="bottom" secondItem="q1Y-0Y-kpr" secondAttribute="bottom" id="ECo-xK-hkU"/>
+                <constraint firstItem="q1Y-0Y-kpr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Sxz-oL-wTv"/>
+                <constraint firstItem="kqW-m6-0BI" firstAttribute="bottom" secondItem="q1Y-0Y-kpr" secondAttribute="bottom" constant="-16" id="X8A-QC-81e"/>
+                <constraint firstItem="q1Y-0Y-kpr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bTe-m5-lym"/>
+                <constraint firstAttribute="trailing" secondItem="q1Y-0Y-kpr" secondAttribute="trailing" id="biV-oc-YS7"/>
+                <constraint firstItem="OFJ-fF-Trf" firstAttribute="top" secondItem="q1Y-0Y-kpr" secondAttribute="top" id="cNa-jY-5bI"/>
+                <constraint firstItem="kqW-m6-0BI" firstAttribute="trailing" secondItem="q1Y-0Y-kpr" secondAttribute="trailing" id="hZ1-HE-TtC"/>
+                <constraint firstItem="kqW-m6-0BI" firstAttribute="leading" secondItem="q1Y-0Y-kpr" secondAttribute="leading" id="ixU-Bh-JEx"/>
+                <constraint firstItem="OFJ-fF-Trf" firstAttribute="trailing" secondItem="q1Y-0Y-kpr" secondAttribute="trailing" id="xJS-dP-Csc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="81.026785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_difficulty" width="24" height="24"/>
+        <image name="ic_duration" width="24" height="24"/>
+        <image name="ic_recipes_grey" width="24" height="24"/>
+        <image name="img_food" width="344" height="128"/>
+    </resources>
+</document>

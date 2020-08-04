@@ -11,7 +11,7 @@ import Reusable
 
 final class HomeTableHeaderView: UIView, NibLoadable {
     
-    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet private weak var headerLabel: UILabel!
     
     func setUp(title: String) {
         headerLabel.text = title

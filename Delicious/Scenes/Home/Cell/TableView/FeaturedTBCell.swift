@@ -14,7 +14,7 @@ import RxDataSources
 
 final class FeaturedTBCell: UITableViewCell, NibReusable {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     private let cellHeight: CGFloat = 160
     

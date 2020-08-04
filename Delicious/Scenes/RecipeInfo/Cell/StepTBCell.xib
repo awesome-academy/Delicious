@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="StepTBCell" customModule="Delicious" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="495" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="495" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTC-bG-tZO">
+                        <rect key="frame" x="16" y="9.5" width="25" height="25"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOn-of-WCU">
+                                <rect key="frame" x="4" y="3.5" width="17" height="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nOn-of-WCU" firstAttribute="centerY" secondItem="wTC-bG-tZO" secondAttribute="centerY" id="0Q4-5g-BtQ"/>
+                            <constraint firstAttribute="width" secondItem="wTC-bG-tZO" secondAttribute="height" multiplier="1:1" id="Bpe-bg-Kue"/>
+                            <constraint firstItem="nOn-of-WCU" firstAttribute="centerX" secondItem="wTC-bG-tZO" secondAttribute="centerX" id="GZQ-6D-TND"/>
+                            <constraint firstAttribute="width" constant="25" id="whM-3g-dpc"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a symbolic breakpoint at UIViewAlertForUnsatisfiableConstraints to catch this" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdN-NS-AGq">
+                        <rect key="frame" x="65" y="8" width="414" height="28"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wTC-bG-tZO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4xO-Vc-Xj7"/>
+                    <constraint firstItem="kdN-NS-AGq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Pd0-SI-Xhj"/>
+                    <constraint firstAttribute="trailing" secondItem="kdN-NS-AGq" secondAttribute="trailing" constant="16" id="ReT-5S-AEh"/>
+                    <constraint firstItem="wTC-bG-tZO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="beV-VV-quz"/>
+                    <constraint firstItem="kdN-NS-AGq" firstAttribute="leading" secondItem="wTC-bG-tZO" secondAttribute="trailing" constant="24" id="ngq-lc-UdV"/>
+                    <constraint firstAttribute="bottom" secondItem="kdN-NS-AGq" secondAttribute="bottom" constant="8" id="uXr-o3-7mv"/>
+                    <constraint firstItem="kdN-NS-AGq" firstAttribute="centerY" secondItem="wTC-bG-tZO" secondAttribute="centerY" id="yhS-32-T6e"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contentLabel" destination="kdN-NS-AGq" id="ayS-j1-tFh"/>
+                <outlet property="stepLabel" destination="nOn-of-WCU" id="zO8-yi-5pz"/>
+            </connections>
+            <point key="canvasLocation" x="258.69565217391306" y="88.392857142857139"/>
+        </tableViewCell>
+    </objects>
+</document>

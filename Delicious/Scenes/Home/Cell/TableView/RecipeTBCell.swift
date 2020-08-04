@@ -12,14 +12,14 @@ import SDWebImage
 
 final class RecipeTBCell: UITableViewCell, NibReusable {
     
-    @IBOutlet weak var shadowView: UIView!
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var recipeImage: UIImageView!
-    @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var timeToCookLabel: UILabel!
-    @IBOutlet weak var recipeNameLabel: UILabel!
-    @IBOutlet weak var difficultyLabel: UILabel!
-    @IBOutlet weak var servingLabel: UILabel!
+    @IBOutlet private weak var shadowView: UIView!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var recipeImage: UIImageView!
+    @IBOutlet private weak var categoryLabel: UILabel!
+    @IBOutlet private weak var timeToCookLabel: UILabel!
+    @IBOutlet private weak var recipeNameLabel: UILabel!
+    @IBOutlet private weak var difficultyLabel: UILabel!
+    @IBOutlet private weak var servingLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,7 +45,7 @@ final class RecipeTBCell: UITableViewCell, NibReusable {
         categoryLabel.text = recipe.creditsText
         recipeNameLabel.text = recipe.title
         timeToCookLabel.text = recipe.readyInMinutes.cookTimeText
-        difficultyLabel.text = Helpers.timeToDificulty(with: recipe.readyInMinutes)
+        difficultyLabel.text = recipe.readyInMinutes.timeToDificulty
         servingLabel.text = recipe.servings.servingsText
     }
 }

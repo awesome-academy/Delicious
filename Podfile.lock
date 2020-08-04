@@ -29,6 +29,9 @@ PODS:
     - Differentiator (~> 4.0)
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
+  - RxGesture (3.0.2):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
@@ -57,6 +60,7 @@ DEPENDENCIES:
   - OrderedSet (= 5.0.0)
   - Reusable (= 4.1.1)
   - RxDataSources (= 4.0.1)
+  - RxGesture (= 3.0.2)
   - RxViewController (= 1.0)
   - SDWebImage (= 5.8.3)
   - SnapKit (= 5.0.1)
@@ -80,6 +84,7 @@ SPEC REPOS:
     - Reusable
     - RxCocoa
     - RxDataSources
+    - RxGesture
     - RxRelay
     - RxSwift
     - RxViewController
@@ -114,6 +119,7 @@ SPEC CHECKSUMS:
   Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
@@ -123,6 +129,6 @@ SPEC CHECKSUMS:
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
   Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 
-PODFILE CHECKSUM: 6ba15014f9e2e083b2515cb2e88eaeb40dd67545
+PODFILE CHECKSUM: 228245136de5567394bec00a1878cda5cd654340
 
 COCOAPODS: 1.9.3

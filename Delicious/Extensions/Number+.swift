@@ -16,4 +16,15 @@ extension Int {
     var cookTimeText: String {
         return String(format: "%d minutes", self)
     }
+    
+    var timeToDificulty: String {
+        switch self {
+        case 0..<20:
+            return "Easy"
+        case 20...40:
+            return "Medium"
+        default:
+            return "Hard"
+        }
+    }
 }

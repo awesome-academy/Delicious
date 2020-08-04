@@ -13,8 +13,8 @@ import RxDataSources
 final class HomeViewController: UIViewController, BindableType {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var tableView: RefreshTableView!
-    @IBOutlet weak var searchButton: UIBarButtonItem!
+    @IBOutlet private weak var tableView: RefreshTableView!
+    @IBOutlet private weak var searchButton: UIBarButtonItem!
     
     // MARK: - Properties
     private let featureTitle = "FEATURED"

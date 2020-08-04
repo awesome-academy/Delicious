@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw" customClass="NutritionTBCell" customModule="Delicious" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="557" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="557" height="117"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzD-Z5-VVo">
+                        <rect key="frame" x="50" y="8" width="491" height="70"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cup Mayonnaise lemon juice, sugar, salt Mayonnaise lemon juice, sugar, salt  Mayonnaise lemon juice" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63s-ES-3HX">
+                        <rect key="frame" x="262.5" y="8" width="278.5" height="70"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQE-jI-aCk">
+                        <rect key="frame" x="16" y="38" width="10" height="10"/>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="2Ys-UO-lnA"/>
+                            <constraint firstAttribute="height" constant="10" id="SsD-2I-9Th"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*(Daily needs: 10g)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vd5-do-v3S">
+                        <rect key="frame" x="414" y="83" width="127" height="26"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                        <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="vzD-Z5-VVo" secondAttribute="trailing" constant="16" id="0j7-xA-Pjd"/>
+                    <constraint firstAttribute="bottom" secondItem="Vd5-do-v3S" secondAttribute="bottom" constant="8" id="2GC-KG-M5q"/>
+                    <constraint firstItem="vzD-Z5-VVo" firstAttribute="centerY" secondItem="rQE-jI-aCk" secondAttribute="centerY" id="3xP-Vo-0zi"/>
+                    <constraint firstItem="63s-ES-3HX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="6l3-bS-b2J"/>
+                    <constraint firstItem="Vd5-do-v3S" firstAttribute="trailing" secondItem="63s-ES-3HX" secondAttribute="trailing" id="TzI-Ua-iaE"/>
+                    <constraint firstItem="rQE-jI-aCk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Xal-0S-py9"/>
+                    <constraint firstItem="vzD-Z5-VVo" firstAttribute="leading" secondItem="rQE-jI-aCk" secondAttribute="trailing" constant="24" id="act-cs-VUO"/>
+                    <constraint firstItem="63s-ES-3HX" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="eJz-Li-eUI"/>
+                    <constraint firstItem="vzD-Z5-VVo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="fIq-DL-yRj"/>
+                    <constraint firstItem="63s-ES-3HX" firstAttribute="centerY" secondItem="vzD-Z5-VVo" secondAttribute="centerY" id="ixX-gq-v5N"/>
+                    <constraint firstItem="Vd5-do-v3S" firstAttribute="top" secondItem="63s-ES-3HX" secondAttribute="bottom" constant="5" id="mHS-E0-5mD"/>
+                    <constraint firstAttribute="trailing" secondItem="63s-ES-3HX" secondAttribute="trailing" constant="16" id="xsA-i0-ows"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dailyNeedLabel" destination="Vd5-do-v3S" id="w72-hy-f86"/>
+                <outlet property="nameLabel" destination="vzD-Z5-VVo" id="QL1-ce-W3T"/>
+                <outlet property="valueLabel" destination="63s-ES-3HX" id="eNJ-Ab-3QT"/>
+            </connections>
+            <point key="canvasLocation" x="303.62318840579712" y="112.16517857142857"/>
+        </tableViewCell>
+    </objects>
+</document>

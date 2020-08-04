@@ -19,4 +19,13 @@ extension String {
         size.height = min(40, size.height)
         return size
     }
+    
+    func strikedThrough(_ isOn: Bool) -> NSAttributedString {
+        if isOn {
+            let strikethroughStyle = [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue]
+            return NSAttributedString(string: self, attributes: strikethroughStyle)
+        } else {
+            return NSAttributedString(string: self)
+        }
+    }
 }

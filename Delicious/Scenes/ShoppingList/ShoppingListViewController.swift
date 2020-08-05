@@ -48,6 +48,8 @@ final class ShoppingListViewController: UIViewController, BindableType {
             $0.register(cellType: ShoppingListTBCell.self)
             $0.backgroundView = EmptyView()
             $0.refreshFooter = nil
+            $0.sectionHeaderHeight = UITableView.automaticDimension
+            $0.estimatedSectionHeaderHeight = 38
             $0.rx
                 .setDelegate(self)
                 .disposed(by: rx.disposeBag)

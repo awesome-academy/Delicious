@@ -10,8 +10,10 @@ import UIKit
 import RxSwift
 
 extension UIViewController {
-    func showError(message: String, completion: (() -> Void)? = nil) {
-        let alert = UIAlertController(title: "Error",
+    func showMessage(title: String,
+                     message: String,
+                     completion: (() -> Void)? = nil) {
+        let alert = UIAlertController(title: title,
                                    message: message,
                                    preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .cancel) { _ in
@@ -19,6 +21,12 @@ extension UIViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    func showError(message: String, completion: (() -> Void)? = nil) {
+        showMessage(title: "Error",
+                    message: message,
+                    completion: completion)
     }
     
     func showAlertConfirm(title: String?,
@@ -65,7 +73,6 @@ extension UIViewController {
                          completion: nil)
             return Disposables.create {
                 alertController.dismiss(animated: true, completion: nil)
-                observer.onCompleted()
             }
         }.asDriverOnErrorJustComplete()
     }

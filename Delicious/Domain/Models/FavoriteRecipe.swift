@@ -36,3 +36,14 @@ extension FavoriteRecipe: CoreDataModel {
         return id
     }
 }
+
+extension FavoriteRecipe {
+    init(from type: RecipeType) {
+        id = type.id
+        title = type.title
+        readyInMinutes = type.readyInMinutes
+        servings = type.servings
+        image = type.image
+        creditsText = type.creditsText
+    }
+}

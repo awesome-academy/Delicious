@@ -20,6 +20,7 @@ enum Constant {
     static let shoppingEmptyMessage = "You do not have any shopping lists yet!"
     static let favoriteRemoveConfirm = "Are you sure you want to remove this recipe from Favorite?"
     static let shoppingListRemoveConfirm = "Are you sure you want to remove this recipe from Shopping List?"
+    static let shoppingListAddedMessage = "Added to shoping list!"
     
     static let throttle = RxTimeInterval.milliseconds(300)
     

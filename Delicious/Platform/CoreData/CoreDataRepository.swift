@@ -56,6 +56,7 @@ extension CoreDataRepository where
                     return entities.compactMap { Self.item(from: $0) }
                 } ?? []
             observer.onNext(items)
+            observer.onCompleted()
             return Disposables.create()
         }
     }
@@ -69,6 +70,7 @@ extension CoreDataRepository where
             } else {
                 observer.onNext(nil)
             }
+            observer.onCompleted()
             return Disposables.create()
         }
     }
@@ -81,6 +83,7 @@ extension CoreDataRepository where
             } else {
                 observer.onNext(nil)
             }
+            observer.onCompleted()
             return Disposables.create()
         }
     }
@@ -138,6 +141,7 @@ extension CoreDataRepository where
             let context = NSManagedObjectContext.mr_()
             let count = EntityType.mr_countOfEntities(with: predicate, in: context)
             observer.onNext(Int(count))
+            observer.onCompleted()
             return Disposables.create()
         }
     }

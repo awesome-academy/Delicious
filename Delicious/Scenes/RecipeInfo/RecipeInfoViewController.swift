@@ -39,6 +39,26 @@ final class RecipeInfoViewController: UIViewController, BindableType {
     private let segmentTexts = ["Nutritions", "Ingredients", "Instructions"]
     private let navigationBarHeight: CGFloat = (Helpers.statusBarSize?.height ?? 0) + Constant.segmentHeight
     private var headerHeight: CGFloat = .zero
+    
+    private var _isFavorite = false {
+        didSet {
+            let image = _isFavorite ? Icon.icFavoriteSelected : Icon.icFavorite
+            favoriteButton.image = image
+        }
+    }
+    private let loadShopingListTrigger = PublishSubject<Void>()
+
+    private var isShoppingButtonHidden: Binder<Bool> {
+        return Binder(self) { (viewController, status) in
+            viewController.animateShoppingButton(status: status)
+        }
+    }
+
+    private var isFavorited: Binder<Bool> {
+        return Binder(self) { (viewController, status) in
+            viewController._isFavorite = status
+        }
+    }
 
     // MARK: - Life Cycle
 
@@ -49,6 +69,7 @@ final class RecipeInfoViewController: UIViewController, BindableType {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         configNavigationBar()
     }
 
@@ -115,10 +136,84 @@ final class RecipeInfoViewController: UIViewController, BindableType {
     private func configNavigationBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     }
+    
+    private func animateShoppingButton(status: Bool) {
+        shoppingViewBottomConstraint.constant = status ? -150 : 16
+        UIView.animate(withDuration: 0.25) {
+            self.view.layoutIfNeeded()
+        }
+    }
 
     func bindViewModel() {
-        let input = RecipeInfoViewModel.Input()
+        let dataSource = RxTableViewSectionedReloadDataSource<RecipeTableViewSection>(
+            configureCell: { (dataSource, tableView, indexPath, _) -> UITableViewCell in
+                switch dataSource[indexPath] {
+                case .nutrientItem(let item):
+                    let cell = tableView.dequeueReusableCell(for: indexPath, cellType: NutritionTBCell.self)
+                    cell.setData(data: item)
+                    return cell
+                case .ingredientItem(let item):
+                    let cell = tableView.dequeueReusableCell(for: indexPath, cellType: IngredientTBCell.self)
+                    cell.setUp(data: item)
+                    return cell
+                case .stepItem(let step):
+                    let cell = tableView.dequeueReusableCell(for: indexPath, cellType: StepTBCell.self)
+                    cell.setUp(data: step)
+                    return cell
+                }
+            }, titleForHeaderInSection: { (section, index) in
+                switch section.sectionModels[index] {
+                case .stepSection:
+                    return "Method \(index + 1)"
+                default:
+                    return ""
+                }
+            })
+
+        let input = RecipeInfoViewModel.Input(
+            loadTrigger: Driver.just(()),
+            reloadTrigger: refreshControl.refreshTrigger,
+            favoriteTrigger: favoriteButton.rx.tap
+                                           .asDriver()
+                                           .throttle(Constant.throttle)
+                                           .map { !self._isFavorite },
+            segmentTrigger: segmentControl.rx.selectedSegmentIndex.asDriver(),
+            loadShoppingListTrigger: loadShopingListTrigger.asDriverOnErrorJustComplete(),
+            addToShoppingListTrigger: addToShoppingButton.rx.tap.asDriver()
+        )
+
         let output = viewModel.transform(input)
+
+        output.isLoading
+            .drive(rx.isLoading)
+            .disposed(by: rx.disposeBag)
+        output.isReloading
+            .drive(refreshControl.isRefreshing)
+            .disposed(by: rx.disposeBag)
+        output.error
+            .drive(rx.error)
+            .disposed(by: rx.disposeBag)
+        output.recipe
+            .drive(headerView.recipe)
+            .disposed(by: rx.disposeBag)
+        output.title
+            .drive(titleLabel.rx.text)
+            .disposed(by: rx.disposeBag)
+        output.dataSource
+            .drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: rx.disposeBag)
+        output.shoppingButtonHidden
+            .drive(isShoppingButtonHidden)
+            .disposed(by: rx.disposeBag)
+        output.isFavorited
+            .drive(isFavorited)
+            .disposed(by: rx.disposeBag)
+        output.tapShopingList
+            .do(onNext: { [weak self] _ in
+                self?.loadShopingListTrigger.onNext(())
+            })
+            .drive()
+            .disposed(by: rx.disposeBag)
     }
 }
 

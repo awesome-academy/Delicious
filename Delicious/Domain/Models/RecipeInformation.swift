@@ -94,3 +94,14 @@ struct RecipeInformation: Mappable, RecipeType {
         originalId <- map["originalId"]
     }
 }
+
+extension RecipeInformation {
+    init(from type: RecipeType) {
+        id = type.id
+        title = type.title
+        readyInMinutes = type.readyInMinutes
+        servings = type.servings
+        image = type.image
+        creditsText = type.creditsText
+    }
+}

@@ -19,9 +19,7 @@ extension Reactive where Base: MagicalRecord {
                     observer.onCompleted()
                 }
             })
-            return Disposables.create {
-                observer.onCompleted()
-            }
+            return Disposables.create()
         }
     }
     

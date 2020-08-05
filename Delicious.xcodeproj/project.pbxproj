@@ -71,6 +71,8 @@
 		40805DE224D7A9C200C5BB82 /* HomeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40805DE124D7A9C100C5BB82 /* HomeRequest.swift */; };
 		40805DE424D7A9D000C5BB82 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40805DE324D7A9D000C5BB82 /* URLs.swift */; };
 		40805DE724D7A9F900C5BB82 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40805DE624D7A9F900C5BB82 /* HomeRepository.swift */; };
+		408453BE24DA5D9B002CC5A2 /* RecipeInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408453BD24DA5D9A002CC5A2 /* RecipeInformationRepository.swift */; };
+		408453C024DA5DA2002CC5A2 /* RecipeInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408453BF24DA5DA1002CC5A2 /* RecipeInfoRequest.swift */; };
 		40C1D1C824D9520700563888 /* FavoriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1D1C724D9520600563888 /* FavoriteRepository.swift */; };
 		40C1D1CA24D95EE300563888 /* RecipeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C1D1C924D95EE300563888 /* RecipeDataSource.swift */; };
 		40CAEADD24CE6E2E00037E4D /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAEAD924CE6E2E00037E4D /* AppNavigator.swift */; };
@@ -213,6 +215,8 @@
 		40805DE124D7A9C100C5BB82 /* HomeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRequest.swift; sourceTree = "<group>"; };
 		40805DE324D7A9D000C5BB82 /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		40805DE624D7A9F900C5BB82 /* HomeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		408453BD24DA5D9A002CC5A2 /* RecipeInformationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInformationRepository.swift; sourceTree = "<group>"; };
+		408453BF24DA5DA1002CC5A2 /* RecipeInfoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeInfoRequest.swift; sourceTree = "<group>"; };
 		40C1D1C724D9520600563888 /* FavoriteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRepository.swift; sourceTree = "<group>"; };
 		40C1D1C924D95EE300563888 /* RecipeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDataSource.swift; sourceTree = "<group>"; };
 		40CAEAD924CE6E2E00037E4D /* AppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
@@ -608,6 +612,7 @@
 		407DED8F24CECBC500B30B5A /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				408453BF24DA5DA1002CC5A2 /* RecipeInfoRequest.swift */,
 				40805DE124D7A9C100C5BB82 /* HomeRequest.swift */,
 				407DEDA624CECC5300B30B5A /* CustomRequestAdapter.swift */,
 				407DED9124CECBC500B30B5A /* BaseRequest.swift */,
@@ -628,6 +633,7 @@
 		40805DE524D7A9F900C5BB82 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				408453BD24DA5D9A002CC5A2 /* RecipeInformationRepository.swift */,
 				40805DE624D7A9F900C5BB82 /* HomeRepository.swift */,
 			);
 			path = Repositories;
@@ -1026,6 +1032,7 @@
 				40EDDBB924CED8100091DDD2 /* Us.swift in Sources */,
 				40D216A524CEB276005310F3 /* FavoriteUseCase.swift in Sources */,
 				4045029124D9367200D0B1B0 /* NSShortIngredient.swift in Sources */,
+				408453C024DA5DA2002CC5A2 /* RecipeInfoRequest.swift in Sources */,
 				4045028424D9075100D0B1B0 /* ShoppingListTBCell.swift in Sources */,
 				40EDDBBA24CED8100091DDD2 /* ExtendedIngredient.swift in Sources */,
 				40CAEADE24CE6E2E00037E4D /* AppViewModel.swift in Sources */,
@@ -1078,6 +1085,7 @@
 				40805DE724D7A9F900C5BB82 /* HomeRepository.swift in Sources */,
 				40D216A724CEB276005310F3 /* HomeUseCase.swift in Sources */,
 				40D2168724CE909D005310F3 /* Array+.swift in Sources */,
+				408453BE24DA5D9B002CC5A2 /* RecipeInformationRepository.swift in Sources */,
 				40EDDBB824CED8100091DDD2 /* Step.swift in Sources */,
 				407DEDA924CECC6400B30B5A /* APIKey.swift in Sources */,
 				40EDDBB724CED8100091DDD2 /* AnalyzedInstruction.swift in Sources */,

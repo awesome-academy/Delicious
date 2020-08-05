@@ -19,10 +19,10 @@ protocol RecipeInfoUseCaseType {
 struct RecipeInfoUseCase: RecipeInfoUseCaseType {
     let favoriteRepository = FavoriteRepository()
     let shoppingListRepository = ShoppingListRepository()
+    let infoRepository = RecipeInformationRepository()
     
     func getRecipe(id: Int) -> Observable<RecipeInformation> {
-        // TODO: Add API
-        return Observable.just(RecipeInformation())
+        return infoRepository.getRecipeInfo(id: id)
     }
     
     func addToShopingList(recipe: RecipeInformation, type: RecipeType) -> Observable<Void> {

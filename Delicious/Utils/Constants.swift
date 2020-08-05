@@ -30,4 +30,54 @@ enum Constant {
     
     static let tableHeaderSectionHeight: CGFloat = 38
     static let segmentHeight: CGFloat = 44
+    
+    static let mealTypes = [
+        "main course",
+        "side dish",
+        "dessert",
+        "appetizer",
+        "salad",
+        "bread",
+        "breakfast",
+        "soup",
+        "beverage",
+        "sauce",
+        "marinade",
+        "fingerfood",
+        "snack",
+        "drink"
+    ]
+    static let cuisines = [
+        "African",
+        "American",
+        "British",
+        "Cajun",
+        "Caribbean",
+        "Chinese",
+        "Eastern European",
+        "European",
+        "Indian",
+        "Italian",
+        "Japanese",
+        "Korean",
+        "Mexican",
+        "Middle Eastern",
+        "Nordic",
+        "Southern",
+        "Spanish",
+        "Thai",
+        "Vietnamese"
+    ]
+    static let diets = [
+        "Gluten Free",
+        "Ketogenic",
+        "Vegetarian",
+        "Lacto-Vegetarian",
+        "Ovo-Vegetarian",
+        "Vegan",
+        "Pescetarian",
+        "Paleo",
+        "Primal",
+        "Whole30"
+    ]
 }

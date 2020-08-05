@@ -14,14 +14,20 @@ struct SearchViewModel {
 // MARK: - ViewModelType
 extension SearchViewModel: ViewModelType {
     struct Input {
-
+        let loadTrigger: Driver<Void>
     }
 
     struct Output {
-
+        let tags: Driver<[SearchCollectionViewSection]>
     }
 
     func transform(_ input: Input) -> Output {
-        return Output()
+        let tags = input.loadTrigger
+            .map {
+                self.useCase.getSearchTags()
+            }
+        return Output(
+            tags: tags
+        )
     }
 }

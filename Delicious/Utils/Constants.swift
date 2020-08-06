@@ -31,6 +31,9 @@ enum Constant {
     static let tableHeaderSectionHeight: CGFloat = 38
     static let segmentHeight: CGFloat = 44
     
+    static let numberPerPage = 10
+    static let maxOffsetPage = 900
+    
     static let mealTypes = [
         "main course",
         "side dish",

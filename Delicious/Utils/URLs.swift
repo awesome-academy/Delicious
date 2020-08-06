@@ -20,5 +20,6 @@ enum URLs {
         static let searchUrl = API.baseUrl + "recipes/complexSearch"
         static let searchByIngredientUrl = API.baseUrl + "recipes/findByIngredients"
         static let informationUrl = API.baseUrl + "recipes/%d/information"
+        static let autoCompletion = API.baseUrl + "recipes/autocomplete"
     }
 }

@@ -64,4 +64,43 @@ struct APIService {
         }.asObservable()
     }
     
+    func request<T: Mappable>(input: BaseRequest) ->  Observable<[T]> {
+        
+        print("\n------------REQUEST INPUT")
+        print("link: %@", input.url)
+        print("body: %@", input.body ?? "No Body")
+        print("------------ END REQUEST INPUT\n")
+        
+        return Single<[T]>.create { single in
+            self.alamofireManager.request(input.url,
+                                          method: input.requestType,
+                                          parameters: input.body,
+                                          encoding: input.encoding)
+                .validate(statusCode: 200..<500)
+                .responseJSON { response in
+                    switch response.result {
+                    case .success(let value):
+                        guard let statusCode = response.response?.statusCode else {
+                            single(.error(BaseError.unexpectedError))
+                            return
+                        }
+                        if statusCode == 200 {
+                            if let object = Mapper<T>().mapArray(JSONObject: value) {
+                                single(.success(object))
+                            }
+                        } else {
+                            if let object = Mapper<ErrorResponse>().map(JSONObject: value) {
+                                single(.error(BaseError.apiFailure(error: object)))
+                            } else {
+                                single(.error(BaseError.httpError(httpCode: statusCode)))
+                            }
+                        }
+                        
+                    case .failure:
+                        single(.error(BaseError.networkError))
+                    }
+            }
+            return Disposables.create()
+        }.asObservable()
+    }
 }

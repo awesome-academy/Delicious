@@ -35,6 +35,7 @@ target 'Delicious' do
     pod 'SnapKit', '5.0.1'
     pod 'MarqueeLabel', '4.0.2'
     pod 'UICollectionViewLeftAlignedLayout', '1.0.2'
+    pod 'MaterialComponents/Chips', '110.3.0'
     pod 'MBSegmentControl', :git => 'https://github.com/HoaPham98/MBSegmentControl.git'
 
   target 'DeliciousTests' do

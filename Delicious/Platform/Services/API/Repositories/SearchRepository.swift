@@ -16,11 +16,12 @@ struct SearchRepository: SearchRepositoryType {
     func search(input: SearchRequest) -> Observable<PagingInfo<RecipeInformation>> {
         return api.request(input: input).map { (response: SearchResponse) in
             let page = response.offset / response.number + 1
-            return PagingInfo<RecipeInformation>(
+            let pagingInfo = PagingInfo<RecipeInformation>(
                 page: page,
                 items: response.results,
-                hasMorePages: response.offset > Constant.maxOffsetPage
+                hasMorePages: response.results.count >= Constant.numberPerPage
             )
+            return pagingInfo
         }
     }
     

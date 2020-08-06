@@ -48,3 +48,9 @@ enum SearchTag {
         return Constant.cuisines.map { SearchTag.cuisine($0) }
     }
 }
+
+extension SearchTag: Equatable {
+    static func == (lhs: SearchTag, rhs: SearchTag) -> Bool {
+        return lhs.textString == rhs.textString && lhs.typeString == rhs.typeString
+    }
+}

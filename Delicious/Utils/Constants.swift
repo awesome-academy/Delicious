@@ -34,6 +34,8 @@ enum Constant {
     static let numberPerPage = 10
     static let maxOffsetPage = 900
     
+    static let kFirstRun = "kFirstRun"
+    
     static let mealTypes = [
         "main course",
         "side dish",

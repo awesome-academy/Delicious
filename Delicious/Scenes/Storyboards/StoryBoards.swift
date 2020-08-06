@@ -14,4 +14,5 @@ enum StoryBoards {
     static let shoppingList = UIStoryboard(name: "ShoppingList", bundle: nil)
     static let recipeInfo = UIStoryboard(name: "RecipeInfo", bundle: nil)
     static let search = UIStoryboard(name: "Search", bundle: nil)
+    static let onboarding = UIStoryboard(name: "Onboarding", bundle: nil)
 }

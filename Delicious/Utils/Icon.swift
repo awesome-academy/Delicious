@@ -26,4 +26,8 @@ enum Icon {
     static let icError = #imageLiteral(resourceName: "img_error")
     static let icNetwork = #imageLiteral(resourceName: "img_no_connection")
     static let icEmpty = #imageLiteral(resourceName: "img_no_items_cart")
+    
+    static let imgRecipes = #imageLiteral(resourceName: "img_recipes")
+    static let imgFavorites = #imageLiteral(resourceName: "img_favorites")
+    static let imgShoppingList = #imageLiteral(resourceName: "img_shoppinglist")
 }

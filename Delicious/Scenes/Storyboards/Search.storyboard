@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pkq-FN-PmJ" customClass="RefreshTableView" customModule="MGLoadMore">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CIv-ZM-73f">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -26,7 +30,7 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BqQ-GA-zyY" customClass="RefreshTableView" customModule="MGLoadMore">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BqQ-GA-zyY">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -35,20 +39,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="lW2-1O-aex" firstAttribute="bottom" secondItem="CIv-ZM-73f" secondAttribute="bottom" id="0Mc-Vv-pBg"/>
+                            <constraint firstItem="Pkq-FN-PmJ" firstAttribute="top" secondItem="lW2-1O-aex" secondAttribute="top" id="4Mm-fO-bza"/>
                             <constraint firstItem="lW2-1O-aex" firstAttribute="trailing" secondItem="CIv-ZM-73f" secondAttribute="trailing" id="4vc-Pz-h0x"/>
                             <constraint firstItem="CIv-ZM-73f" firstAttribute="top" secondItem="lW2-1O-aex" secondAttribute="top" id="7Ho-KD-XAt"/>
                             <constraint firstItem="CIv-ZM-73f" firstAttribute="leading" secondItem="lW2-1O-aex" secondAttribute="leading" id="Awn-Hm-sWc"/>
-                            <constraint firstItem="BqQ-GA-zyY" firstAttribute="trailing" secondItem="CIv-ZM-73f" secondAttribute="trailing" id="mXi-4Q-F2p"/>
-                            <constraint firstItem="BqQ-GA-zyY" firstAttribute="bottom" secondItem="CIv-ZM-73f" secondAttribute="bottom" id="o10-DP-Jpt"/>
-                            <constraint firstItem="BqQ-GA-zyY" firstAttribute="leading" secondItem="CIv-ZM-73f" secondAttribute="leading" id="qnI-tS-V6V"/>
-                            <constraint firstItem="BqQ-GA-zyY" firstAttribute="top" secondItem="CIv-ZM-73f" secondAttribute="top" id="th5-yc-ZqE"/>
+                            <constraint firstItem="lW2-1O-aex" firstAttribute="bottom" secondItem="Pkq-FN-PmJ" secondAttribute="bottom" id="BNI-Lz-Zf6"/>
+                            <constraint firstItem="lW2-1O-aex" firstAttribute="trailing" secondItem="Pkq-FN-PmJ" secondAttribute="trailing" id="DOK-jS-O0q"/>
+                            <constraint firstItem="Pkq-FN-PmJ" firstAttribute="leading" secondItem="lW2-1O-aex" secondAttribute="leading" id="hKD-5b-f06"/>
+                            <constraint firstItem="BqQ-GA-zyY" firstAttribute="trailing" secondItem="lW2-1O-aex" secondAttribute="trailing" id="mXi-4Q-F2p"/>
+                            <constraint firstItem="BqQ-GA-zyY" firstAttribute="bottom" secondItem="lW2-1O-aex" secondAttribute="bottom" id="o10-DP-Jpt"/>
+                            <constraint firstItem="BqQ-GA-zyY" firstAttribute="leading" secondItem="lW2-1O-aex" secondAttribute="leading" id="qnI-tS-V6V"/>
+                            <constraint firstItem="BqQ-GA-zyY" firstAttribute="top" secondItem="lW2-1O-aex" secondAttribute="top" id="th5-yc-ZqE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lW2-1O-aex"/>
                     </view>
                     <navigationItem key="navigationItem" id="CZw-pS-9TN"/>
                     <connections>
                         <outlet property="collectionView" destination="CIv-ZM-73f" id="mgj-eL-Ohz"/>
-                        <outlet property="tableView" destination="BqQ-GA-zyY" id="cX5-bY-RzO"/>
+                        <outlet property="resultsTableView" destination="Pkq-FN-PmJ" id="jO1-wo-nlp"/>
+                        <outlet property="suggestTableView" destination="BqQ-GA-zyY" id="2Fr-1A-yZ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUa-dl-UnI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,8 +9,10 @@
 import Foundation
 
 final class SearchRequest: BaseRequest {
-    init(query: String, tags: [SearchTag]) {
-        var body = ["query": query]
+    init(query: String, tags: [SearchTag], offset: Int = 0) {
+        var body = ["query": query,
+                    "number": Constant.numberPerPage,
+                    "offset": offset] as [String: Any]
         var cuisines = [String]()
         var diets = [String]()
         var types = [String]()

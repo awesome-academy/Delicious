@@ -25,7 +25,8 @@ extension SearchViewModel: ViewModelType {
         let reloadTrigger: Driver<Void>
         let loadMoreTrigger: Driver<Void>
         let autoCompletion: Driver<String>
-        let selectTrigger: Driver<RecipeType>
+        let selectTrigger: Driver<SearchResultItem>
+        let removeTagTrigger: Driver<SearchTag>
     }
 
     struct Output {
@@ -33,11 +34,14 @@ extension SearchViewModel: ViewModelType {
         let results: Driver<[SearchResultSection]>
         let autoCompletions: Driver<[AutoCompletionSection]>
         let selected: Driver<Void>
-        let searched: Driver<Void>
         let isLoading: Driver<Bool>
         let isReloading: Driver<Bool>
         let isLoadmore: Driver<Bool>
+        let hasMorePage: Driver<Bool>
         let state: Driver<EmptyView.State>
+        let showResults: Driver<Void>
+        let showTags: Driver<Void>
+        let showAutoCompletion: Driver<Void>
     }
 
     func transform(_ input: Input) -> Output {
@@ -49,9 +53,20 @@ extension SearchViewModel: ViewModelType {
             input.searchTrigger.map { SearchModel(query: $0, tags: []) },
             input.tagTrigger.map { SearchModel(query: "", tags: [$0]) }
         )
+        
+        let removeTag = input.removeTagTrigger
+            .withLatestFrom(searchModel) { tag, model  -> SearchModel in
+                var newTags = model.tags
+                if let index = newTags.firstIndex(where: { $0 == tag }) {
+                    newTags.remove(at: index)
+                }
+                return SearchModel(query: model.query, tags: newTags)
+            }
+        
+        let newSearchModel = Driver.merge(searchModel, removeTag)
 
-        let reloadTrigger = input.reloadTrigger.withLatestFrom(searchModel)
-        let loadMoreTrigger = input.loadMoreTrigger.withLatestFrom(searchModel)
+        let reloadTrigger = input.reloadTrigger.withLatestFrom(newSearchModel)
+        let loadMoreTrigger = input.loadMoreTrigger.withLatestFrom(newSearchModel)
 
         let getSearch = getPage(
             loadTrigger: searchModel,
@@ -63,9 +78,11 @@ extension SearchViewModel: ViewModelType {
 
         let (page, error, isLoading, isReloading, isLoadingMore) = getSearch.destructured
 
-        let results = page.map { data in
-            self.useCase.getSearchResultSection(data: data.items)
-        }
+        let results = page
+            .withLatestFrom(searchModel) { (page, model) in
+                self.useCase.getSearchResultSection(data: page.items, tags: model.tags)
+            }
+        let hasMorePage = page.map { $0.hasMorePages }
 
         let autoCompletion = input.autoCompletion
             .filter { !$0.isEmpty }
@@ -76,7 +93,14 @@ extension SearchViewModel: ViewModelType {
             }
 
         let selected = input.selectTrigger
-            .do(onNext: self.navigator.toInformation(recipe:))
+            .do(onNext: { item in
+                switch item {
+                case .recipe(let recipe):
+                    self.navigator.toInformation(recipe: recipe)
+                default:
+                    break
+                }
+            })
             .mapToVoid()
 
         let searchState = results.map { $0.isEmpty ? EmptyView.State.empty(Constant.emptyMessage) : .normal }
@@ -85,19 +109,38 @@ extension SearchViewModel: ViewModelType {
             searchState,
             error.map { EmptyView.State.error($0) }
         )
-
-        let searched = searchModel.mapToVoid()
+        
+        let showResults = Driver.merge(
+            input.searchTrigger.mapToVoid(),
+            input.tagTrigger.mapToVoid()
+        )
+        
+        let showTags = Driver.merge(
+            input.autoCompletion
+                .filter { $0.isEmpty }
+                .mapToVoid(),
+            newSearchModel
+                .filter { $0.query.isEmpty && $0.tags.isEmpty }
+                .mapToVoid()
+        )
+        
+        let showAutoCompletion = input.autoCompletion
+            .filter { !$0.isEmpty }
+            .mapToVoid()
 
         return Output(
             tags: tags,
             results: results,
             autoCompletions: autoCompletion,
             selected: selected,
-            searched: searched,
             isLoading: isLoading,
             isReloading: isReloading,
             isLoadmore: isLoadingMore,
-            state: state
+            hasMorePage: hasMorePage,
+            state: state,
+            showResults: showResults,
+            showTags: showTags,
+            showAutoCompletion: showAutoCompletion
         )
     }
 }

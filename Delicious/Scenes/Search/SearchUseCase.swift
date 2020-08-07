@@ -10,7 +10,7 @@ protocol SearchUseCaseType {
     func search(input: SearchModel, page: Int) -> Observable<PagingInfo<RecipeInformation>>
     func getAutoCompletion(text: String) -> Observable<[AutoCompletion]>
     func setSuggestSection(texts: [String]) -> [AutoCompletionSection]
-    func getSearchResultSection(data: [RecipeInformation]) -> [SearchResultSection]
+    func getSearchResultSection(data: [RecipeInformation], tags: [SearchTag]) -> [SearchResultSection]
     func getSearchTags() -> [SearchCollectionViewSection]
 }
 
@@ -33,9 +33,15 @@ struct SearchUseCase: SearchUseCaseType {
         ]
     }
     
-    func getSearchResultSection(data: [RecipeInformation]) -> [SearchResultSection] {
+    func getSearchResultSection(data: [RecipeInformation], tags: [SearchTag]) -> [SearchResultSection] {
         if data.isEmpty { return [] }
-        return [SearchResultSection(model: "", items: data)]
+        var sections = [
+            SearchResultSection.result(recipes: data.map { SearchResultItem.recipe($0) })
+        ]
+        if !tags.isEmpty {
+            sections.insert(SearchResultSection.tags(tags: [SearchResultItem.tags(tags)]), at: 0)
+        }
+        return sections
     }
     func getSearchTags() -> [SearchCollectionViewSection] {
         return [

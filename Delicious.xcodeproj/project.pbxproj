@@ -17,6 +17,7 @@
 		4003876424D11132008CD83F /* FeaturedCLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4003875C24D11132008CD83F /* FeaturedCLCell.swift */; };
 		4003876624D11138008CD83F /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4003876524D11138008CD83F /* HomeDataSource.swift */; };
 		4003876824D11254008CD83F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4003876724D11254008CD83F /* Helpers.swift */; };
+		4007896624DBDF86004CF06D /* StackTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007896524DBDF86004CF06D /* StackTagCell.swift */; };
 		40308EC324D2778D0026A3B3 /* Number+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40308EC224D2778D0026A3B3 /* Number+.swift */; };
 		40358B1524D8003D00D7E8DE /* HeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40358B1324D8003C00D7E8DE /* HeaderTableView.swift */; };
 		40358B1624D8003D00D7E8DE /* RefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40358B1424D8003D00D7E8DE /* RefreshControl.swift */; };
@@ -167,6 +168,7 @@
 		4003875C24D11132008CD83F /* FeaturedCLCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCLCell.swift; sourceTree = "<group>"; };
 		4003876524D11138008CD83F /* HomeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		4003876724D11254008CD83F /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		4007896524DBDF86004CF06D /* StackTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTagCell.swift; sourceTree = "<group>"; };
 		40308EC224D2778D0026A3B3 /* Number+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+.swift"; sourceTree = "<group>"; };
 		40358B1324D8003C00D7E8DE /* HeaderTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableView.swift; sourceTree = "<group>"; };
 		40358B1424D8003D00D7E8DE /* RefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshControl.swift; sourceTree = "<group>"; };
@@ -682,6 +684,7 @@
 				408453C524DA5FC9002CC5A2 /* SuggestTableViewCell.xib */,
 				408453C624DA5FC9002CC5A2 /* TagCollectionViewCell.xib */,
 				408453C724DA5FC9002CC5A2 /* SuggestTableViewCell.swift */,
+				4007896524DBDF86004CF06D /* StackTagCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1099,6 +1102,7 @@
 				40EDDBBC24CED8100091DDD2 /* Ingredient.swift in Sources */,
 				40EDDBBF24CED8310091DDD2 /* RecipeType.swift in Sources */,
 				40358B2E24D8008100D7E8DE /* StepTBCell.swift in Sources */,
+				4007896624DBDF86004CF06D /* StackTagCell.swift in Sources */,
 				4045028B24D92FEA00D0B1B0 /* CoreDataRepository.swift in Sources */,
 				40805DE224D7A9C200C5BB82 /* HomeRequest.swift in Sources */,
 				4048B87D24D382DF001D795C /* RecipeInfoViewController.swift in Sources */,

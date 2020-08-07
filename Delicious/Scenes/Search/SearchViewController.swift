@@ -6,8 +6,7 @@
 //  Copyright © 2020 sun. All rights reserved.
 //
 
-import UIKit
-import Reusable
+import MaterialComponents
 
 final class SearchViewController: UIViewController, BindableType {
 
@@ -21,6 +20,8 @@ final class SearchViewController: UIViewController, BindableType {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var resultsTableView: RefreshTableView!
     @IBOutlet private weak var suggestTableView: UITableView!
+    @IBOutlet private weak var tagCollectionView: UICollectionView!
+    @IBOutlet private weak var resultsView: UIView!
     
     // MARK: - Properties
 
@@ -29,6 +30,29 @@ final class SearchViewController: UIViewController, BindableType {
     private let loadTrigger = PublishSubject<Void>()
     private let searchTrigger = PublishSubject<String>()
     private let selectTrigger = PublishSubject<RecipeType>()
+    private let removeTagTrigger = PublishSubject<SearchTag>()
+    private let autoFooter = RefreshAutoFooter()
+    
+    private var showAutoCompletion: Binder<Void> {
+        return Binder(self) { (viewController, _) in
+            viewController._showAutoCompletion()
+        }
+    }
+    private var showResults: Binder<Void> {
+        return Binder(self) { (viewController, _) in
+            viewController._showResults()
+        }
+    }
+    private var showTags: Binder<Void> {
+        return Binder(self) { (viewController, _) in
+            viewController._showTags()
+        }
+    }
+    private var hasMorePage: Binder<Bool> {
+        return Binder(self) { viewController, status in
+            viewController.resultsTableView.refreshFooter = status ? viewController.autoFooter : nil
+        }
+    }
 
     // MARK: - Life Cycle
 
@@ -61,14 +85,16 @@ final class SearchViewController: UIViewController, BindableType {
         }
         resultsTableView.do {
             $0.register(cellType: RecipeTBCell.self)
+            $0.register(cellType: StackTagCell.self)
             $0.backgroundView = EmptyView()
-            $0.isHidden = true
+            $0.rx
+                .setDelegate(self)
+                .disposed(by: rx.disposeBag)
         }
         suggestTableView.do {
             $0.register(cellType: SuggestTableViewCell.self)
             $0.isHidden = true
         }
-        
     }
 
     func bindViewModel() {
@@ -92,35 +118,42 @@ final class SearchViewController: UIViewController, BindableType {
             }
         )
 
-        let resultsDataSource = RxTableViewSectionedReloadDataSource<SearchResultSection>(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
-            return tableView.dequeueReusableCell(
-                for: indexPath,
-                cellType: RecipeTBCell.self
-            ).then {
-                $0.setInfo(recipe: item)
+        let resultsDataSource = RxTableViewSectionedReloadDataSource<SearchResultSection>(
+            configureCell: { [weak self] (_, tableView, indexPath, item) -> UITableViewCell in
+                switch item {
+                case .recipe(let recipe):
+                    return tableView.dequeueReusableCell(
+                        for: indexPath,
+                        cellType: RecipeTBCell.self
+                    ).then {
+                        $0.setInfo(recipe: recipe)
+                    }
+                case .tags(let tags):
+                    return tableView.dequeueReusableCell(
+                        for: indexPath,
+                        cellType: StackTagCell.self
+                    ).then {
+                        $0.setUp(tags: tags)
+                        $0.tapDelete = {
+                            self?.removeTagTrigger.onNext($0)
+                        }
+                    }
+                }
             }
-        })
-        
+        )
+
         let suggestDataSource = RxTableViewSectionedReloadDataSource<AutoCompletionSection>(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
             return tableView.dequeueReusableCell(
                 for: indexPath,
-                cellType: SuggestTableViewCell.self)
-            .then {
+                cellType: SuggestTableViewCell.self
+            ).then {
                 $0.setUp(item)
             }
         })
-        
+
         let autoCompletion = searchBar.rx.text
             .orEmpty
             .asDriverOnErrorJustComplete()
-            .do(onNext: { [weak self] text in
-                if text.isEmpty {
-                    self?.showTags()
-                    self?.loadTrigger.onNext(())
-                } else {
-                    self?.showAutoCompletion()
-                }
-            })
             .debounce(Constant.throttle)
             .distinctUntilChanged()
 
@@ -133,16 +166,18 @@ final class SearchViewController: UIViewController, BindableType {
             reloadTrigger: resultsTableView.loadMoreTopTrigger,
             loadMoreTrigger: resultsTableView.loadMoreBottomTrigger,
             autoCompletion: autoCompletion,
-            selectTrigger: selectTrigger.asDriverOnErrorJustComplete()
+            selectTrigger: resultsTableView.rx
+                                           .modelSelected(SearchResultItem.self)
+                                           .asDriver(),
+            removeTagTrigger: removeTagTrigger.asDriverOnErrorJustComplete()
         )
         let output = viewModel.transform(input)
-        
+
         suggestTableView.rx
             .modelSelected(String.self)
-            .do(onNext: {
-                self.searchBar.text = $0
-                self.searchTrigger.onNext($0)
-                self.showResults()
+            .do(onNext: { [weak self] in
+                self?.searchBar.text = $0
+                self?.searchTrigger.onNext($0)
             })
             .asDriverOnErrorJustComplete()
             .drive()
@@ -152,6 +187,9 @@ final class SearchViewController: UIViewController, BindableType {
             .disposed(by: rx.disposeBag)
         output.results
             .drive(resultsTableView.rx.items(dataSource: resultsDataSource))
+            .disposed(by: rx.disposeBag)
+        output.hasMorePage
+            .drive(hasMorePage)
             .disposed(by: rx.disposeBag)
         output.autoCompletions
             .drive(suggestTableView.rx.items(dataSource: suggestDataSource))
@@ -171,27 +209,33 @@ final class SearchViewController: UIViewController, BindableType {
         output.selected
             .drive()
             .disposed(by: rx.disposeBag)
-        output.searched
-            .do(onNext: showResults)
-            .drive()
+        output.showResults
+            .drive(showResults)
+            .disposed(by: rx.disposeBag)
+        output.showTags
+            .drive(showTags)
+            .disposed(by: rx.disposeBag)
+        output.showAutoCompletion
+            .drive(showAutoCompletion)
             .disposed(by: rx.disposeBag)
     }
-    
-    private func showAutoCompletion() {
+
+    private func _showAutoCompletion() {
         collectionView.isHidden = true
-        resultsTableView.isHidden = true
+        resultsView.isHidden = true
         suggestTableView.isHidden = false
     }
-    
-    private func showResults() {
+
+    private func _showResults() {
         collectionView.isHidden = true
-        resultsTableView.isHidden = false
+        resultsView.isHidden = false
         suggestTableView.isHidden = true
     }
-    
-    private func showTags() {
+
+    private func _showTags() {
+        loadTrigger.onNext(())
         collectionView.isHidden = false
-        resultsTableView.isHidden = true
+        resultsView.isHidden = true
         suggestTableView.isHidden = true
     }
 }
@@ -208,9 +252,15 @@ extension SearchViewController: UISearchBarDelegate {
         guard let query = searchBar.text else { return }
         searchTrigger.onNext(query)
     }
-    
+
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         loadTrigger.onNext(())
+    }
+}
+
+extension SearchViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

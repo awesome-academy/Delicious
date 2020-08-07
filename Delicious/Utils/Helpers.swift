@@ -11,4 +11,12 @@ import UIKit
 enum Helpers {
     static var statusBarSize: CGSize?
     static var safeAreaInsets: UIEdgeInsets?
+    static var hasRunBefore: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Constant.kFirstRun)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constant.kFirstRun)
+        }
+    }
 }

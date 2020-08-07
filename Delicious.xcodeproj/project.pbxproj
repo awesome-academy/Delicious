@@ -18,6 +18,16 @@
 		4003876624D11138008CD83F /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4003876524D11138008CD83F /* HomeDataSource.swift */; };
 		4003876824D11254008CD83F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4003876724D11254008CD83F /* Helpers.swift */; };
 		4007896624DBDF86004CF06D /* StackTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007896524DBDF86004CF06D /* StackTagCell.swift */; };
+		4007896924DBEC58004CF06D /* OnboardingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007896824DBEC58004CF06D /* OnboardingNavigator.swift */; };
+		4007896B24DBEC63004CF06D /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007896A24DBEC63004CF06D /* OnboardingViewModel.swift */; };
+		4007896D24DBEC71004CF06D /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007896C24DBEC71004CF06D /* OnboardingController.swift */; };
+		4007897024DBEDCD004CF06D /* OnboardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4007896F24DBEDCD004CF06D /* OnboardingView.xib */; };
+		4007897224DBEDD9004CF06D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007897124DBEDD9004CF06D /* OnboardingView.swift */; };
+		4007897424DBF0A2004CF06D /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4007897324DBF0A2004CF06D /* Onboarding.storyboard */; };
+		4007897624DBF87D004CF06D /* OnboardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007897524DBF87D004CF06D /* OnboardingUseCase.swift */; };
+		4007897824DBFBDD004CF06D /* UIScrollView+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007897724DBFBDD004CF06D /* UIScrollView+rx.swift */; };
+		4007897A24DC0F2B004CF06D /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007897924DC0F2B004CF06D /* Application.swift */; };
+		4007897C24DC1976004CF06D /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007897B24DC1976004CF06D /* UIWindow+.swift */; };
 		40308EC324D2778D0026A3B3 /* Number+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40308EC224D2778D0026A3B3 /* Number+.swift */; };
 		40358B1524D8003D00D7E8DE /* HeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40358B1324D8003C00D7E8DE /* HeaderTableView.swift */; };
 		40358B1624D8003D00D7E8DE /* RefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40358B1424D8003D00D7E8DE /* RefreshControl.swift */; };
@@ -169,6 +179,16 @@
 		4003876524D11138008CD83F /* HomeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		4003876724D11254008CD83F /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		4007896524DBDF86004CF06D /* StackTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTagCell.swift; sourceTree = "<group>"; };
+		4007896824DBEC58004CF06D /* OnboardingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigator.swift; sourceTree = "<group>"; };
+		4007896A24DBEC63004CF06D /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		4007896C24DBEC71004CF06D /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
+		4007896F24DBEDCD004CF06D /* OnboardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingView.xib; sourceTree = "<group>"; };
+		4007897124DBEDD9004CF06D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		4007897324DBF0A2004CF06D /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		4007897524DBF87D004CF06D /* OnboardingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUseCase.swift; sourceTree = "<group>"; };
+		4007897724DBFBDD004CF06D /* UIScrollView+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+rx.swift"; sourceTree = "<group>"; };
+		4007897924DC0F2B004CF06D /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		4007897B24DC1976004CF06D /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		40308EC224D2778D0026A3B3 /* Number+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+.swift"; sourceTree = "<group>"; };
 		40358B1324D8003C00D7E8DE /* HeaderTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableView.swift; sourceTree = "<group>"; };
 		40358B1424D8003D00D7E8DE /* RefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshControl.swift; sourceTree = "<group>"; };
@@ -357,6 +377,27 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		4007896724DBEB88004CF06D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4007896E24DBEDBF004CF06D /* View */,
+				4007896824DBEC58004CF06D /* OnboardingNavigator.swift */,
+				4007896A24DBEC63004CF06D /* OnboardingViewModel.swift */,
+				4007896C24DBEC71004CF06D /* OnboardingController.swift */,
+				4007897524DBF87D004CF06D /* OnboardingUseCase.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		4007896E24DBEDBF004CF06D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4007896F24DBEDCD004CF06D /* OnboardingView.xib */,
+				4007897124DBEDD9004CF06D /* OnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		40358B1724D8008000D7E8DE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +538,7 @@
 			children = (
 				404CC62024CE645200686B99 /* AppDelegate.swift */,
 				404CC62224CE645200686B99 /* SceneDelegate.swift */,
+				4007897924DC0F2B004CF06D /* Application.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -536,6 +578,8 @@
 				4048B88E24D38830001D795C /* UITableView+Rx.swift */,
 				40308EC224D2778D0026A3B3 /* Number+.swift */,
 				4045028824D92FDF00D0B1B0 /* MagicalRecord+Rx.swift */,
+				4007897724DBFBDD004CF06D /* UIScrollView+rx.swift */,
+				4007897B24DC1976004CF06D /* UIWindow+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -563,6 +607,7 @@
 		404CC65924CE65D600686B99 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4007896724DBEB88004CF06D /* Onboarding */,
 				4048B87324D382DF001D795C /* RecipeInfo */,
 				4048B87824D382DF001D795C /* Search */,
 				40D2169324CEB276005310F3 /* Favorite */,
@@ -597,6 +642,7 @@
 				40D216AE24CEB41E005310F3 /* Home.storyboard */,
 				4048B88524D38314001D795C /* RecipeInfo.storyboard */,
 				4048B88724D38325001D795C /* Search.storyboard */,
+				4007897324DBF0A2004CF06D /* Onboarding.storyboard */,
 				40D216B424CEB4B3005310F3 /* StoryBoards.swift */,
 			);
 			path = Storyboards;
@@ -887,6 +933,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4007897024DBEDCD004CF06D /* OnboardingView.xib in Resources */,
 				404CC63024CE645500686B99 /* LaunchScreen.storyboard in Resources */,
 				408453C924DA5FCA002CC5A2 /* SearchCollectionViewHeader.xib in Resources */,
 				404CC62D24CE645500686B99 /* Assets.xcassets in Resources */,
@@ -901,6 +948,7 @@
 				40358B2B24D8008100D7E8DE /* RecipeHeaderView.xib in Resources */,
 				4003876024D11132008CD83F /* HomeTableHeaderView.xib in Resources */,
 				4048B88624D38314001D795C /* RecipeInfo.storyboard in Resources */,
+				4007897424DBF0A2004CF06D /* Onboarding.storyboard in Resources */,
 				4048B88C24D38797001D795C /* EmptyView.xib in Resources */,
 				40358B2F24D8008100D7E8DE /* StepTBCell.xib in Resources */,
 				40D216B224CEB45B005310F3 /* Favorite.storyboard in Resources */,
@@ -1062,6 +1110,7 @@
 				40358B1524D8003D00D7E8DE /* HeaderTableView.swift in Sources */,
 				407DED9E24CECBC500B30B5A /* BaseRequest.swift in Sources */,
 				40805DE024D7A9BB00C5BB82 /* HomeResponse.swift in Sources */,
+				4007897824DBFBDD004CF06D /* UIScrollView+rx.swift in Sources */,
 				40358B1624D8003D00D7E8DE /* RefreshControl.swift in Sources */,
 				4045028F24D9359C00D0B1B0 /* ShopingListRepository.swift in Sources */,
 				4048B87E24D382DF001D795C /* RecipeInfoNavigator.swift in Sources */,
@@ -1074,6 +1123,7 @@
 				40D2169024CEAE5B005310F3 /* Icon.swift in Sources */,
 				40D216AB24CEB276005310F3 /* ShoppingListUseCase.swift in Sources */,
 				40EDDBB324CED8100091DDD2 /* Metric.swift in Sources */,
+				4007896924DBEC58004CF06D /* OnboardingNavigator.swift in Sources */,
 				40D2168924CE909D005310F3 /* MBSegmentControl+Rx.swift in Sources */,
 				40D216A224CEB276005310F3 /* FavoriteNavigator.swift in Sources */,
 				40EDDBB624CED8100091DDD2 /* CaloricBreakdown.swift in Sources */,
@@ -1085,8 +1135,10 @@
 				40EDDBBB24CED8100091DDD2 /* Measure.swift in Sources */,
 				407DEDA324CECBC500B30B5A /* ErrorResponse.swift in Sources */,
 				40EDDBB924CED8100091DDD2 /* Us.swift in Sources */,
+				4007896B24DBEC63004CF06D /* OnboardingViewModel.swift in Sources */,
 				408453CA24DA5FCA002CC5A2 /* TagCollectionViewCell.swift in Sources */,
 				40D216A524CEB276005310F3 /* FavoriteUseCase.swift in Sources */,
+				4007897A24DC0F2B004CF06D /* Application.swift in Sources */,
 				4045029124D9367200D0B1B0 /* NSShortIngredient.swift in Sources */,
 				408453C024DA5DA2002CC5A2 /* RecipeInfoRequest.swift in Sources */,
 				4045028424D9075100D0B1B0 /* ShoppingListTBCell.swift in Sources */,
@@ -1100,11 +1152,13 @@
 				407DED9A24CECBC500B30B5A /* APIServices.swift in Sources */,
 				40D216AD24CEB276005310F3 /* ShoppingListViewController.swift in Sources */,
 				40EDDBBC24CED8100091DDD2 /* Ingredient.swift in Sources */,
+				4007897224DBEDD9004CF06D /* OnboardingView.swift in Sources */,
 				40EDDBBF24CED8310091DDD2 /* RecipeType.swift in Sources */,
 				40358B2E24D8008100D7E8DE /* StepTBCell.swift in Sources */,
 				4007896624DBDF86004CF06D /* StackTagCell.swift in Sources */,
 				4045028B24D92FEA00D0B1B0 /* CoreDataRepository.swift in Sources */,
 				40805DE224D7A9C200C5BB82 /* HomeRequest.swift in Sources */,
+				4007897C24DC1976004CF06D /* UIWindow+.swift in Sources */,
 				4048B87D24D382DF001D795C /* RecipeInfoViewController.swift in Sources */,
 				40358B2A24D8008100D7E8DE /* IngredientTBCell.swift in Sources */,
 				408453D124DA602E002CC5A2 /* SearchTag.swift in Sources */,
@@ -1123,6 +1177,7 @@
 				404CC62B24CE645200686B99 /* Delicious.xcdatamodeld in Sources */,
 				408453CF24DA5FD3002CC5A2 /* SearchDataSource.swift in Sources */,
 				40D216A324CEB276005310F3 /* FavoriteViewController.swift in Sources */,
+				4007897624DBF87D004CF06D /* OnboardingUseCase.swift in Sources */,
 				40D216AA24CEB276005310F3 /* ShoppingListNavigator.swift in Sources */,
 				4048B88224D382DF001D795C /* SearchUseCase.swift in Sources */,
 				40CAEADD24CE6E2E00037E4D /* AppNavigator.swift in Sources */,
@@ -1136,6 +1191,7 @@
 				4003876624D11138008CD83F /* HomeDataSource.swift in Sources */,
 				4003876424D11132008CD83F /* FeaturedCLCell.swift in Sources */,
 				40EDDBB524CED8100091DDD2 /* WinePairing.swift in Sources */,
+				4007896D24DBEC71004CF06D /* OnboardingController.swift in Sources */,
 				4048B87F24D382DF001D795C /* RecipeInfoUseCase.swift in Sources */,
 				40D2167E24CE905E005310F3 /* Constants.swift in Sources */,
 				40C1D1C824D9520700563888 /* FavoriteRepository.swift in Sources */,

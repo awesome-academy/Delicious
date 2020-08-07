@@ -24,7 +24,10 @@ extension AppViewModel: ViewModelType {
     func transform(_ input: AppViewModel.Input) -> AppViewModel.Output {
         
         let toMain = input.loadTrigger
-            .do(onNext: navigator.toMain)
+            .do(onNext: {
+                Helpers.hasRunBefore ? self.navigator.toMain() : self.navigator.toOnboarding()
+                Helpers.hasRunBefore = true
+            })
         
         return Output(
             toMain: toMain
